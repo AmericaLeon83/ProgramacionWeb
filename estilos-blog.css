@@ -1,0 +1,58 @@
+
+.custom-content {
+    
+/* Estilos específicos para la sección de blog */
+.blog-section {
+    padding-top: 50px; /* Ajusta el espacio superior según sea necesario */
+  }
+  
+  .blog-section h1 {
+    color: #333; /* Cambia el color del título */
+  }
+  
+  /* Estilos para los bloques de contenido */
+  .blog-block {
+    margin-bottom: 30px; /* Espacio entre bloques */
+  }
+  
+  .blog-block .card {
+    background-color: #f8f9fa; /* Cambia el color de fondo de las tarjetas */
+  }
+  
+  .blog-block .card-title {
+    color: #333; /* Cambia el color del título de la tarjeta */
+  }
+  
+  /* Otros estilos específicos según tus necesidades */
+  
+
+
+  .page-header {
+    font-size: 1.5rem; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color del texto */
+    text-transform: uppercase; /* Transformar a mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    margin-bottom: 30px; /* Margen inferior */
+  }
+
+  .product-block h4 a {
+    font-size: 1.2rem; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color del texto */
+  }
+
+  .price-mob {
+    font-size: 1.1rem; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color del texto */
+  }
+
+
+  .text-center {
+    text-align: center;
+}
+.text-justify {
+    text-align: justify;
+}
+}

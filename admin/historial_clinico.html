@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reumatologia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .text-center {
+            text-align: center;
+        }
+        .text-justify {
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+      <header>
+      <!-- Navbar -->
+      <div class="wrap">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col">
+                    <p class="mb-0 phone"><span class="fa fa-phone"></span> <a href="#">+00 1234 567</a></p>
+                </div>
+                <div class="col d-flex justify-content-end">
+                    <div class="social-media">
+                        <p class="mb-0 d-flex">
+                            <a href="#" class="d-flex align-items-center justify-content-center"><img src="images/f.png" alt="Facebook" style="width: 30px; height: 30px;"></a>
+                            <a href="#" class="d-flex align-items-center justify-content-center"><img src="images/t.png" alt="Twitter" style="width: 30px; height: 30px;"></a>
+                            <a href="#" class="d-flex align-items-center justify-content-center"><img src="images/i.png" alt="Instagram" style="width: 30px; height: 30px;"></a>
+                            <a href="#" class="d-flex align-items-center justify-content-center"><img src="images/w.png" alt="Whatsapp" style="width: 30px; height: 30px;"></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+      <nav class="navbar navbar-expand-lg" style="background-color: #343a40;">
+        <div class="container">
+          <style>
+            .navbar-brand img {
+                max-width: 150px;
+                max-height: 150px;
+                width: auto;
+                height: auto;
+            }
+        </style>
+        
+        <a class="navbar-brand" href="#">
+            <img src="images/logotipo.png" alt="Logo">
+        </a>        
+            <form action="#" class="searchform order-sm-start order-lg-last">
+                <div class="form-group d-flex">
+                    <input type="text" class="form-control pl-3" placeholder="Search" style="background-color: #ffffff; color: #495057;">
+                    <button type="submit" class="btn btn-outline-light" style="background-color: #ffffff; padding: 6px 10px;">
+                        <img src="images/busqueda.png" alt="Buscar" style="width: 40px; height: 40px;">
+                        <span class="sr-only">Buscar</span>
+                    </button>
+                </div>
+            </form>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" style="border-color: #ffffff;">
+                <span class="fa fa-bars" style="color: #ffffff;"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item active"><a href="index.html" class="nav-link" style="color: #ffffff;">Inicio</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ffffff;">Servicios</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04" style="background-color: #343a40;">
+                            <a class="dropdown-item" href="modelos.html" style="color: #ffffff;">Modelos</a>
+                            <a class="dropdown-item" href="terapia.html" style="color: #ffffff;">Mantenimiento</a>
+                            <a class="dropdown-item" href="historial_clinico.html" style="color: #ffffff;">Agendar cita</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="modelos.html" class="nav-link" style="color: #ffffff;">Modelos</a></li>
+                    <li class="nav-item"><a href="armazones.html" class="nav-link" style="color: #ffffff;">Armazones</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link" style="color: #ffffff;">Blog</a></li>
+                    <li class="nav-item"><a href="visitanos.html" class="nav-link" style="color: #ffffff;">Visitanos</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Botón de agendar cita -->
+        <div class="navbar-nav ml-auto">
+          <button class="btn" style="background-color: transparent; border: none;">
+              <a href="historial_clinico.html" style="text-decoration: none; color: #ffffff;">
+                  <img src="images/calendario.png" alt="Agendar Cita" style="width: 50px; height: 50px; margin-right: 5px;">
+                  Agendar Cita
+              </a>
+          </button>
+      </div>
+      
+      <!-- Fin del botón de agendar cita -->
+    </nav>
+    <!-- Fin del Navbar -->
+  <body>
+    <h1>Historia Clinica</h1>
+    <div>
+      <header>
+
+      </header>
+      <section>
+          <div class="container text-left">
+            <div class="row">
+              <div class="col">
+                <form action="">
+
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" name="nombre" placeholder="Captura tu nombre" value="" class="form-control" id="nombre"/>
+                </div>
+              
+                <div class="mb-3">
+                  <label for="primer-apellido" class="form-label">Primer Apelido</label>
+                  <input type="text" name="primer-apellido" placeholder="Captura tu Primer apellido" value="" class="form-control" id="primer-apellido"/>
+                </div>
+
+                <div class="mb-3">
+                  <label for="segundo-apellido" class="form-label">Segundo Apellido</label>
+                  <input type="text" name="segundo-apellido" placeholder="Captura tu Segundo Apellido" value="" class="form-control" id="segundo-apellido"/>
+                </div>
+
+                <div class="mb-3">
+                  <label for="nacimiento" class="form-label">Fecha de nacimiento</label>
+                  <input type="date" name="nacimiento" placeholder="Captura tu Fecha de nacimiento" value="" class="form-control" id="nacimiento"/>
+                </div>
+
+                <label for="fracturas" class="form-label">Haz tenido fracturas?</label>
+
+                <div class="form-check">
+                  <input type="radio" name="fracturas" placeholder="fracturas" value="1" id="fracturasSi"/>
+                  <label for="" class="form-check-label">Si</label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" name="fracturas" placeholder="fracturas" value="1" id="fracturasNo"/>
+                  <label for="" class="form-check-label">No</label>
+                </div>
+                
+                <div class="form-check">
+                  <label for="descripcion_fractura" class="form-label">Si contesto si, describa cual:</label>
+                  <textarea name="descripcion_fracturas" id="" cols="30" rows="10" class="form-control"></textarea>
+                </div>
+                <!-- ////////OTRA LESION//////-->
+                <label for="lesion" class="form-label">Haz tenido alguna otra lesión grave??</label>
+
+                <div class="form-check">
+                  <input type="radio" name="lesion" placeholder="lesion" value="1" id="lesionSi"/>
+                  <label for="" class="form-check-label">Si</label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" name="lesion" placeholder="lesion" value="1" id="lesionNo"/>
+                  <label for="" class="form-check-label">No</label>
+                </div>
+                
+                <div class="form-check">
+                  <label for="descripcion_fractura" class="form-label">Si contesto si, describa cual:</label>
+                  <textarea name="descripcion_fracturas" id="" cols="30" rows="10" class="form-control"></textarea>
+                </div>
+                <!--///////////////////////////////////-->
+                 <!-- ////////se ha hecho rpruebas de hepatitis B//////-->
+                 <label for="hepatitis" class="form-label">Haz tenido Hepatitis B??</label>
+
+                 <div class="form-check">
+                   <input type="radio" name="lesion" placeholder="hepatitis" value="1" id="hepatitisSi"/>
+                   <label for="" class="form-check-label">Si</label>
+                 </div>
+                 <div class="form-check">
+                   <input type="radio" name="lesion" placeholder="Hepatitis" value="1" id="hepatitisNo"/>
+                   <label for="" class="form-check-label">No</label>
+                 </div>
+                 
+                 <div class="form-check">
+                   <label for="descripcion_hepatitis" class="form-label">Si contesto si, indique positivo o negativo</label>
+                   <textarea name="Resultado positivo o negativo" id="" cols="2" rows="2" class="form-control"></textarea>
+                   <label for="descripcion_hepatitis" class="form-label">Si contesto si, indique anio:</label>
+                   <textarea name="indique que anio" id="" cols="2" rows="2" class="form-control"></textarea>
+                 </div>
+                 <!--///////////////////////////////////-->
+                    <!-- ////////se ha hecho rpruebas de hepatitis C//////-->
+                    <label for="hepatitis" class="form-label">Haz tenido Hepatitis C??</label>
+
+                    <div class="form-check">
+                      <input type="radio" name="lesion" placeholder="hepatitis" value="1" id="hepatitisSi"/>
+                      <label for="" class="form-check-label">Si</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="radio" name="lesion" placeholder="Hepatitis" value="1" id="hepatitisNo"/>
+                      <label for="" class="form-check-label">No</label>
+                    </div>
+                    
+                    <div class="form-check">
+                      <label for="descripcion_hepatitis" class="form-label">Si contesto si, indique positivo o negativo</label>
+                   <textarea name="Resultado positivo o negativo" id="" cols="2" rows="2" class="form-control"></textarea>
+                   <label for="descripcion_hepatitis" class="form-label">Si contesto si, indique anio:</label>
+                   <textarea name="indique que anio" id="" cols="2" rows="2" class="form-control"></textarea>
+                    </div>
+                    <!--///////////////////////////////////-->
+                          <!-- ////////se ha hecho rpruebas de VIH//////-->
+                          <label for="hepatitis" class="form-label">Haz tenido VIH??</label>
+
+                          <div class="form-check">
+                            <input type="radio" name="lesion" placeholder="hepatitis" value="1" id="hepatitisSi"/>
+                            <label for="" class="form-check-label">Si</label>
+                          </div>
+                          <div class="form-check">
+                            <input type="radio" name="lesion" placeholder="Hepatitis" value="1" id="hepatitisNo"/>
+                            <label for="" class="form-check-label">No</label>
+                          </div>
+                          
+                          <div class="form-check">
+                            <label for="descripcion_hepatitis" class="form-label">Si contesto si, indique positivo o negativo</label>
+                   <textarea name="Resultado positivo o negativo" id="" cols="2" rows="2" class="form-control"></textarea>
+                   <label for="descripcion_hepatitis" class="form-label">Si contesto si, indique anios:</label>
+                   <textarea name="indique que anio" id="" cols="2" rows="2" class="form-control"></textarea>
+                          </div>
+                          <!--///////////////////////////////////-->
+                          
+                <h3>Historia Social</h3>
+                   <!-- ////////se ha hecho rpruebas de VIH//////-->
+                   <label for="fumar" class="form-label">Usted Fuma?</label>
+
+                   <div class="form-check">
+                     <input type="radio" name="fumar" placeholder="fumar" value="1" id="fumarSi"/>
+                     <label for="" class="form-check-label">Si</label>
+                   </div>
+                   <div class="form-check">
+                     <input type="radio" name="fumar" placeholder="fumar" value="1" id="hepatitisNo"/>
+                     <label for="" class="form-check-label">No</label>
+                   </div>
+                   
+                   <div class="form-check">
+                     <label for="descripcion_fumar" class="form-label">Si contesto si, Numero de paquetes al dia</label>
+            <textarea name="Resultado positivo o negativo" id="" cols="2" rows="2" class="form-control"></textarea>
+            <label for="descripcion_fumar" class="form-label">Si contesto si, por cuantos anios?</label>
+            <textarea name="indique que anio" id="" cols="2" rows="2" class="form-control"></textarea>
+                   </div>
+                   <!--///////////////////////////////////-->
+                   <!-- ////////alcohol//////-->
+                   <label for="fumar" class="form-label">Actualmente toma bebidas alcohólicas?</label>
+
+                   <div class="form-check">
+                     <input type="radio" name="alcohol" placeholder="alcohol" value="1" id="alcoholSi"/>
+                     <label for="" class="form-check-label">Si</label>
+                   </div>
+                   <div class="form-check">
+                     <input type="radio" name="alcohol" placeholder="alcohol" value="1" id="alcoholNo"/>
+                     <label for="" class="form-check-label">No</label>
+                   </div>
+                   
+                   <div class="form-check">
+                     <label for="descripcion_alcohol" class="form-label">Con qué frecuencia?</label>
+            <textarea name="Resultado positivo o negativo" id="" cols="2" rows="2" class="form-control"></textarea>
+            <label for="descripcion_alcohol" class="form-label">Antes tomaba regularmente?</label>
+            <textarea name="indique regularidad" id="" cols="2" rows="2" class="form-control"></textarea>
+                   </div>
+                   <!--///////////////////////////////////-->
+                   <!-- ////////cocaina o marihuana//////-->
+                   <label for="fumar" class="form-label">Usa alguna sustancia como cocaina o marihuana?</label>
+
+                   <div class="form-check">
+                     <input type="radio" name="cocaina" placeholder="cocaina" value="1" id="cocainaSi"/>
+                     <label for="" class="form-check-label">Si</label>
+                   </div>
+                   <div class="form-check">
+                     <input type="radio" name="cocaina" placeholder="cocaina" value="1" id="cocainaNo"/>
+                     <label for="" class="form-check-label">No</label>
+                   </div>
+                   <div class="form-check">
+                     <label for="descripcion_cocaina" class="form-label">Si contesto que si,por favor enumere aqui?</label>
+            <textarea name="Resultado positivo o negativo" id="" cols="2" rows="2" class="form-control"></textarea>
+            <label for="descripcion_cocaina" class="form-label">Con que frecuencia?</label>
+            <textarea name="indique regularidad" id="" cols="2" rows="2" class="form-control"></textarea>
+                   </div>
+                   <!--///////////////////////////////////-->
+      <!-- ////////trabajo//////-->
+      <label for="fumar" class="form-label">Usted trabaja?</label>
+
+      <div class="form-check">
+        <input type="radio" name="trabajo" placeholder="trabajo" value="1" id="trabajoSi"/>
+        <label for="" class="form-check-label">Si</label>
+      </div>
+      <div class="form-check">
+        <input type="radio" name="trabajo" placeholder="trabajo" value="1" id="trabajoNo"/>
+        <label for="" class="form-check-label">No</label>
+      </div>
+      <div class="form-check">
+        <label for="descripcion_trabajo" class="form-label">Cual es su ocupacion?</label>
+<textarea name="Resultado positivo o negativo" id="" cols="2" rows="2" class="form-control"></textarea>
+      <!-- ////////invalidez//////-->
+      <label for="fumar" class="form-label">Recibe compensacion por invalidez?</label>
+      
+      <div class="form-check">
+        <input type="radio" name="invalidez" placeholder="invalidez" value="1" id="invalidezSi"/>
+        <label for="" class="form-check-label">Si</label>
+      </div>
+      <div class="form-check">
+        <input type="radio" name="invalidez" placeholder="invalidez" value="1" id="invalidezNo"/>
+        <label for="" class="form-check-label">No</label>
+      </div>/
+      <div class="form-check">
+        <label for="descripcion_invalidez" class="form-label">Cual es su ocupacion?</label>
+<textarea name="Resultado positivo o negativo" id="" cols="2" rows="2" class="form-control"></textarea>    
+<h4>Síntomas Generales</h4>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="1" id="fiebreRec" name="fiebreRec">
+      <label class="form-check-label" for="fiebreRec">Fiebre Recurrente</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="1" id="perdidaPeso" name="perdidaPeso">
+      <label class="form-check-label" for="perdidaPeso">Pérdida de Peso</label>
+    </div>
+    <!-- Síntomas oculares -->
+    <h4>Síntomas Oculares</h4>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="1" id="visionBorrosa" name="visionBorrosa">
+      <label class="form-check-label" for="visionBorrosa">Visión Borrosa</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="1" id="ojosSecos" name="ojosSecos">
+      <label class="form-check-label" for="ojosSecos">Ojos Secos</label>
+    </div>
+    <!-- Antecedentes -->
+    <h4>Antecedentes</h4>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="1" id="glaucoma" name="glaucoma">
+      <label class="form-check-label" for="glaucoma">Glaucoma</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="1" id="cataratas" name="cataratas">
+      <label class="form-check-label" for="cataratas">Cataratas</label>
+    </div>
+    <!-- Enviar formulario -->
+    <input type="submit" name="enviar" value="Guardar" class="btn btn-success"/>
+  </form>
+</div>               
+                <input type="submit" name="enviar" value="Guardar" class="btn btn-success"/>
+          
+              </form>
+              </div>
+            </div>
+          </div>
+          </div>
+      </section>
+      <footer>
+        <div class="container">
+          <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+              <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                <svg class="bi" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+              </a>
+              <span class="mb-3 mb-md-0 text-body-secondary h4">&copy; 2023 Company, Inc</span>
+            </div>
+      
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+              <li class="ms-3"><img src="images/twitter_logo.png" alt="Twitter Logo" width="40" height="40"></li>
+              <li class="ms-3"><a class="text-body-secondary" href="https://twitter.com" target="_blank"><svg class="bi" width="40" height="40"><use xlink:href="#twitter"/></svg></a></li>
+              <li class="ms-3"><img src="images/instagram_logo.png" alt="Instagram Logo" width="40" height="40"></li>
+              <li class="ms-3"><a class="text-body-secondary" href="https://instagram.com" target="_blank"><svg class="bi" width="40" height="40"><use xlink:href="#instagram"/></svg></a></li>
+              <li class="ms-3"><img src="images/facebook_logo.png" alt="Facebook Logo" width="40" height="40"></li>
+              <li class="ms-3"><a class="text-body-secondary" href="https://facebook.com" target="_blank"><svg class="bi" width="40" height="40"><use xlink:href="#facebook"/></svg></a></li>
+            </ul>
+          </footer>
+        </div>
+      </footer>
+      
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

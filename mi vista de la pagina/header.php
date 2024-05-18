@@ -1,0 +1,127 @@
+ <!-- INICIO DEL HEADER DE LAS VISTAS DEL CLIENTE  -->
+ <html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+     <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optica los angeles</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+      <!-- Favicon-->
+      <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="estilos-personalizados.css">
+
+</head>
+<body>
+      <header>
+        <div class="wrap">
+          <div class="container">
+              <div class="row justify-content-between">
+                  <div class="col">
+                      <p class="mb-0 phone"><span class="fa fa-phone"></span> <a href="#">+00 1234 567</a></p>
+                  </div>
+                  <div class="col d-flex justify-content-end">
+                      <div class="social-media">
+                          <p class="mb-0 d-flex">
+                              <a href="https://www.facebook.com/Opticalosangelesc?locale=es_LA" class="d-flex align-items-center justify-content-center"><img src="images/f.png" alt="Facebook" style="width: 30px; height: 30px;"></a>
+                              <a href="#" class="d-flex align-items-center justify-content-center"><img src="images/t.png" alt="Twitter" style="width: 30px; height: 30px;"></a>
+                              <a href="https://www.instagram.com/optlosangeles/reels/" class="d-flex align-items-center justify-content-center"><img src="images/i.png" alt="Instagram" style="width: 30px; height: 30px;"></a>
+                              <a href="#" class="d-flex align-items-center justify-content-center"><img src="images/w.png" alt="Whatsapp" style="width: 30px; height: 30px;"></a>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      
+        <nav class="navbar navbar-expand-lg " style="background-color: #343a40;">
+          <div class="container">
+           
+          
+          <a class="navbar-brand" href="index.php">
+              <img src="images/logoo.png" alt="Logo">
+          </a>  
+                
+          <form action="#" class="searchform order-sm-start order-lg-last special-form">
+    <div class="form-group d-flex">
+        <input type="text" class="form-control pl-3" placeholder="Search">
+        <button type="submit" class="btn btn-outline-light">
+            <!-- Añadimos un contenedor para la imagen para aplicar estilos -->
+            <span class="image-container">
+                <img src="images/transparencia.png" alt="Buscar" style="width: 20px; height: 20px;">
+            </span>
+            <span class="sr-only">Buscar</span>
+        </button>
+    </div>
+</form>
+
+<!-- Estilos CSS para ajustar el tamaño de la imagen -->
+
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" style="border-color: #ffffff;">
+                  <span class="fa fa-bars" style="color: #ffffff;"></span> Menu
+              </button>
+              <div class="collapse navbar-collapse" id="ftco-nav">
+                  <ul class="navbar-nav m-auto">
+                      <li class="nav-item active"><a href="index.php" class="nav-link" style="color: #ffffff;">Inicio</a></li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ffffff;">Modelos</a>
+                          <div class="dropdown-menu" aria-labelledby="dropdown04" style="background-color: #343a40;">
+                              <a class="dropdown-item" href="mujer.php" style="color: #ffffff;">Mujer</a>
+                              <a class="dropdown-item" href="hombre.php" style="color: #ffffff;">Hombre</a>
+                              <a class="dropdown-item" href="lentesol.php" style="color: #ffffff;">Lentes de sol</a>
+                              <a class="dropdown-item" href="lenteAzul.php" style="color: #ffffff;">Lentes de luz azul</a>
+                              <a class="dropdown-item" href="agendarcita.php" style="color: #ffffff;">Agendar cita</a>
+                          </div>
+                      </li>
+                      <li class="nav-item"><a href="armazones.php" class="nav-link" style="color: #ffffff;">Armazones</a></li>
+                      <li class="nav-item"><a href="blog.php" class="nav-link" style="color: #ffffff;">Blog</a></li>
+                      <li class="nav-item"><a  href="productos.php" class="nav-link" style="color: #ffffff;">Productos</a></li>
+                      <li class="nav-item"><a  href="tienda.php" class="nav-link" style="color: #ffffff;">Tienda</a></li>
+                      <li class="nav-item"><a href="visitanos.html" class="nav-link" style="color: #ffffff;">Visitanos</a></li>
+                  </ul>
+                  
+              </div>
+             
+          </div>
+          <!-- Botón de agendar cita -->
+          <div class="navbar-nav ml-auto">
+            <button class="btn" style="background-color: transparent; border: none;">
+                <a href="agendarcita.php" style="text-decoration: none; color: #ffffff;">
+                    <img src="images/calendario.png" alt="Agendar Cita" style="width: 50px; height: 50px; margin-right: 5px;">
+                    Agendar Cita
+                </a>
+            </button>
+            
+        </div>
+        
+        <!-- Fin del botón de agendar cita -->
+
+      
+
+
+  <!-- Botón de inicio de sesión -->
+<button class="btn login-button">Iniciar Sesión</button>
+
+<!-- Sección para el carrito -->
+<div class="navbar-end">
+    <div class="navbar-item">
+        <div class="buttons">
+            <a href="ver_carrito.php" class="btn btn-success boton-yo">
+                            <strong>Ver carrito 
+                                &nbsp;<i class="fa fa-shopping-cart"></i></strong>
+                        </a>
+        </div>
+    </div>
+</div>
+<!-- FIN DEL BOTON CARRITO -->
+        <!-- Fin del botón de agendar cita -->
+      </nav>
+    </header>
+      <!-- Fin del Navbar -->

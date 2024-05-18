@@ -1,0 +1,15 @@
+/* Estilos para el contenedor de botones */
+.button-container {
+    display: flex;
+    align-items: center; /* Alinea los botones verticalmente */
+}
+
+/* Estilos para los botones */
+.btn {
+    margin-right: 10px; /* Espaciado entre los botones */
+    height: 40px; /* Altura fija */
+    min-width: 120px; /* Ancho mínimo */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+

@@ -1,0 +1,120 @@
+.product-image {
+    max-width: 230%; /* Ajuste del ancho máximo de las imágenes */
+    height: auto;
+}
+
+
+.page-header {
+    font-size: 1.5rem; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color del texto */
+    text-transform: uppercase; /* Transformar a mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    margin-bottom: 30px; /* Margen inferior */
+  }
+
+  .product-block h4 a {
+    font-size: 1.2rem; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color del texto */
+  }
+
+  .price-mob {
+    font-size: 1.1rem; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color del texto */
+  }
+
+
+
+
+
+
+.navbar-brand img {
+    max-width: 250px;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+}
+.button.is-success {
+background-color: #ff69b4;
+color: white;
+border: 2px solid #ff69b4; /* Añade un borde sólido */
+border-radius: 5px; /* Ajusta el radio de las esquinas según tu preferencia */
+padding: 10px 20px; /* Ajusta el espacio interno del botón */
+text-decoration: none; /* Evita subrayado en el texto */
+display: inline-block; /* Hace que el botón se comporte como un elemento de línea */
+transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Añade transiciones suaves */
+}
+
+.button.is-success:hover {
+background-color: #ff4f9e;
+border-color: #ff4f9e;
+}
+
+.button.is-success:focus {
+box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+
+.button.is-success strong {
+display: flex;
+align-items: center;
+}
+
+.button.is-success strong i {
+margin-left: 5px; /* Ajusta el espacio entre el texto y el icono */
+}
+
+
+
+
+
+.image-container {
+    /* Ajusta el tamaño según tus necesidades */
+    width: 20px;
+    height: 20px;
+}
+
+
+
+
+.image-container {
+    /* Ajusta el tamaño según tus necesidades */
+    width: 20px;
+    height: 20px;
+}
+
+/* Estilo para el botón de inicio de sesión */
+.login-button {
+    background-color: #FF1493; /* Color de fondo rosa */
+    color: white; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambio de cursor al pasar por encima */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+.login-button:hover {
+    background-color: #C71585; /* Color de fondo rosa más oscuro al pasar el cursor */
+}
+
+/* Estilo para los botones en general */
+.btn {
+    font-size: 16px; /* Tamaño de fuente */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo específico para el botón de ver carrito */
+.btn-success {
+    background-color: #FF5733; /* Color de fondo naranja */
+    color: white; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+.btn-success:hover {
+    background-color: #FF5733; /* Color de fondo naranja más oscuro al pasar el cursor */
+}
