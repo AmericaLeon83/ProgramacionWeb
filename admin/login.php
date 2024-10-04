@@ -1,81 +1,65 @@
 <?php
-include(__DIR__.'/sistema.class.php');
+include __DIR__ . '/sistema.class.php';
 $app = new Sistema();
-$action=(isset($_GET['action']))?$_GET['action']:null;
-require_once(__DIR__.'/views/headerSinMenu.php');
-switch ($action){
-    case 'logout':
+$action = (isset($_GET['action'])) ? $_GET['action'] : null;
+require_once __DIR__ . '/views/headerSinMenu.php';
+switch ($action) {
+    case "logout":
         $app->logout();
-        $tipo = 'success';
-        $mensaje='ha salido del sistema correctamente';
-        $app->alert($tipo,$mensaje);
+        $type = "success";
+        $message = '<i class="fa-solid fa-circle-check"></i> Sesión cerrada correctamente';
+        $app->alert($type, $message);
         break;
-    case 'login':
-        $correo=$_POST['correo'];
-        $contrasena=$_POST['contrasena'];
-        $login = $app->login($correo,$contrasena);
-        if($login){
+    case "login":
+        $correo = $_POST['correo'];
+        $password = $_POST['password'];
+        $login = $app->login($correo, $password);
+        if ($login) {
             header('Location: index.php');
-        }else{
-            $tipo='danger';
-            $mensaje='Usuario o contraseña incorrectos';
-            $app->alert($tipo,$mensaje);
+        } else {
+            $type = "danger";
+            $message = '<i class="fa-solid fa-circle-xmark"></i> Usuario o contraseña incorrectos';
+            $app->alert($type, $message);
         }
         break;
     case 'forgot':
-        include __DIR__.'/views/login/forgot.php';
+        include __DIR__ . '/views/login/forgot.php';
         break;
-
     case 'reset':
-        $correo=$_POST['correo'];
+        $correo = $_POST['correo'];
         $reset = $app->reset($correo);
-        if($reset){
-            $tipo='success';
-            $mensaje='Se ha enviado un correo para recuperar la contraseña';
-            $app->alert($tipo,$mensaje);
-        }else{
-            $tipo='danger';
-            $mensaje='No se pudo enviar el correo';
-            $app->alert($tipo,$mensaje);
+        if ($reset) {
+            $app->alert('success', '<i class="fa-solid fa-circle-check"></i> Correo enviado correctamente');
+        } else {
+            $app->alert('danger', '<i class="fa-solid fa-circle-xmark"></i> Correo no encontrado');
         }
         break;
-        case 'recovery':
-            if(isset($_GET['token'])){
-                $token=$_GET['token'];
-                if($app->recovery($token)){
-                    if(isset($_POST['contrasena'])){
-                        $contrasena = $_POST['contrasena'];
-                        if($app->recovery($token,$contrasena)){
-                            $tipo='success';
-                            $mensaje='Contraseña cambiada correctamente';
-                            $app->alert($tipo,$mensaje);
-                            include __DIR__.'/views/login/index.php';
-                            die;
-                        }
-                        else{
-                            $tipo='danger';
-                            $mensaje='No se pudo cambiar la contraseña';
-                            $app->alert($tipo,$mensaje);
-                            die;
-                        }
+    case 'RECOVERY':
+        if (isset($_GET['token'])) {
+            $token = $_GET['token'];
+            if ($app->recovery($token)) {
+                if (isset($_POST['password'])) {
+                    $password = $_POST['password'];
+                    if ($app->recovery($token, $password)) {
+                        $type = "success";
+                        $message = '<i class="fa-solid fa-circle-check"></i> Contraseña actualizada correctamente';
+                        $app->alert($type, $message);
+                        include __DIR__ . '/views/login/index.php';
+                        die();
+                    } else {
+                        $type = "danger";
+                        $message = '<i class="fa-solid fa-circle-xmark"></i> No se pudo actualizar la contraseña';
+                        $app->alert($type, $message);
+                        die();
                     }
-                    include __DIR__.'/views/login/recovery.php';
-                    die;
                 }
-                $mensaje = 'token no valido';
-                $tipo = 'danger';
-                $app->alert($tipo,$mensaje);
-            }	
-    default:
-        include __DIR__.'/views/login/index.php';
+                include __DIR__ . '/views/login/recovery.php';
+                die();
+            }
+            $app->alert('danger', '<i class="fa-solid fa-circle-xmark"></i> Token no valido');
+            include 'views/login/index.php';
+        }
         break;
+    default:
+        include __DIR__ . '/views/login/index.php';
 }
-
-// $login = $app->login('luislao@itcelaya.edu.mx','123');
-// $x=$app->checkRol('Administrador',true);
-// var_dump($x);
-// $app->checkRol('Administrador');
-// echo '<pre>';
-// var_dump($login);
-// print_r($_SESSION);
-?>

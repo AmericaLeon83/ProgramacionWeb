@@ -1,7 +1,7 @@
 <?php
 include (__DIR__.'/proveedor.class.php'); // Cambiar a proveedor.class.php
 $app=new Proveedor(); // Cambiar a Proveedor
-$app-> checkRol('administrador', true);
+$app->checkRol('Administrador', true);
 include (__DIR__.'/views/header.php');
 $action=(isset($_GET['action']))?$_GET['action']:null;
 $id_proveedor=(isset($_GET['id_proveedor']))?$_GET['id_proveedor']:null; // Cambiar a id_proveedor
@@ -9,7 +9,7 @@ $datos=array();
 $alerta=array();
 switch($action){
     case 'delete':
-      $fila=$app->Delete($id_proveedor); // Cambiar a Delete
+      $fila=$app->Delete($id_proveedor); 
       if($fila){
         $alerta['tipo']="success";
         $alerta['mensaje']='El proveedor fue eliminado correctamente'; // Cambiar a proveedor

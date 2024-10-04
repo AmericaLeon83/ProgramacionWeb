@@ -1,149 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Iniciar sesión - Administrador</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        html,body{ 
-            background-image: url('https://opticahd.com/wp-content/uploads/2021/04/portrait-young-stylish-girl-model-casual-summer-clothes-with-natural-makeup-sunglasses-isolated-1536x1148.jpg');
+        body {
+            background-image: url('https://media.licdn.com/dms/image/C4D1BAQEyoqPqPOTxDA/company-background_1536_768/0/1583086321656?e=2147483647&v=beta&t=WMn7QV0bSRb90UhTIVkppZUPlZ_tPsDfgcZQ2gFb0AA'); /* URL de la imagen de fondo */
             background-size: cover;
+            background-position: center;
             background-repeat: no-repeat;
-            height: 100%;
-            font-family: 'Numans', sans-serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
         }
-        .container {
-    height: 100vh; /* Utiliza toda la altura de la ventana */
-    display: flex; /* Usa flexbox para centrar verticalmente */
-    justify-content: flex-start; /* Alinea el contenido hacia la izquierda */
-    align-items: center; /* Centra verticalmente */
-    margin-left: 20%; /* Espacio en el lado izquierdo */
-}
-
-        .card{
-            height: 370px;
-            margin-top: auto;
-            margin-bottom: auto;
-            width: 400px;
-            background-color: rgba(0,0,0,0.5) !important;
+        .form-signin {
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 400px;
         }
-
-        .social_icon span{
-            font-size: 60px;
-            margin-left: 10px;
-            color: #FFC312;
+        .form-floating label {
+            color: #ddd;
         }
-
-        .social_icon span:hover{
-            color: white;
-            cursor: pointer;
+        .btn-primary {
+            background-color: #ff4081;
+            border-color: #ff4081;
         }
-
-        .card-header h3{
-            color: white;
+        .btn-primary:hover {
+            background-color: #e91e63;
+            border-color: #e91e63;
         }
-
-        .social_icon{
-            position: absolute;
-            right: 20px;
-            top: -45px;
+        .form-check-label, .text-body-secondary {
+            color: #bbb;
         }
-
-        .input-group-prepend span{
-            width: 50px;
-            background-color: #FFC312;
-            color: black;
-            border:0 !important;
+        a {
+            color: #ff4081;
         }
-
-        input:focus{
-            outline: 0 0 0 0  !important;
-            box-shadow: 0 0 0 0 !important;
-
-        }
-
-        .remember{
-            color: white;
-        }
-
-        .remember input
-        {
-            width: 20px;
-            height: 20px;
-            margin-left: 15px;
-            margin-right: 5px;
-        }
-
-        .login_btn{
-            color: black;
-            background-color: #FFC312;
-            width: 100px;
-        }
-
-        .login_btn:hover{
-            color: black;
-            background-color: white;
-        }
-
-        .links{
-            color: white;
-        }
-
-        .links a{
-            margin-left: 4px;
+        a:hover {
+            color: #e91e63;
         }
     </style>
 </head>
 <body>
-    <form action="login.php?action=login" method="post">
-        <div class="container">
-            <div class="d-flex justify-content-center h-100">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Sign In</h3>
-                        <div class="d-flex justify-content-end social_icon">
-                            <span><i class="fab fa-facebook-square"></i></span>
-                            <span><i class="fab fa-google-plus-square"></i></span>
-                            <span><i class="fab fa-twitter-square"></i></span>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <form>
-                            <div class="input-group form-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                    <div class="form-outline mb-4">
-    <input type="email" id="form2Example1" class="form-control" name="correo" />
-    <label class="form-label" for="form2Example1">Email address</label>
-  </div>
-                            <div class="input-group form-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
-                                    <div class="form-outline mb-4">
-    <input type="password" id="form2Example2" class="form-control"  name="contrasena"/>
-    <label class="form-label" for="form2Example2">Password</label>
-  </div>
-
-                            <div class="row align-items-center remember">
-                                <input type="checkbox">Remember Me
-                            </div>
-                            <div class="form-group">
-                            <input type="submit" class="btn btn-primary btn-block mb-4">Sign in</input>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="card-footer">
-                        <div class="d-flex justify-content-center links">
-                            Don't have an account?<a href="#">Sign Up</a>
-                        </div>
-                        <div class="d-flex justify-content-center">
-                            <a href="login.php?action=forgot">Forgot your password?</a>
-                        </div>
-                    </div>
-                </div>
+    <main class="form-signin text-center">
+        <form action="login.php?action=login" method="post">
+            <img class="mb-4" src="../images/logoo.png" alt="Logo" width="260" height="95">
+            <h1 class="h3 mb-3 fw-normal">Iniciar sesión - Administrador</h1>
+            <div class="form-floating">
+                <input type="email" name="correo" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Correo electrónico</label>
             </div>
-        </div>
-    </form>
+            <div class="form-floating">
+                <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Contraseña</label>
+            </div>
+            <div class="form-check text-start my-3">
+                <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Recordarme
+                </label>
+            </div>
+            <div class="mb-3">
+                <a href="login.php?action=forgot">Recuperar mi contraseña</a>
+            </div>
+            <button class="btn btn-primary w-100 py-2" type="submit">Iniciar sesión</button>
+            <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2024</p>
+        </form>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

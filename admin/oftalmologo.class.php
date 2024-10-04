@@ -1,10 +1,10 @@
 <?php
 require_once(__DIR__."/sistema.class.php");
-class Oftalmologo extends Sistema{ // Cambiado el nombre de la clase
+class Oftalmologo extends Sistema{ 
     function getAll(){
         $this->connect();
         $stmt = $this->conn->prepare("SELECT o.id_oftalmologo, o.nombre, o.apellido, o.especialidad, o.horario_disponible
-        FROM oftalmologo o;"); // Cambiado la consulta SQL
+        FROM oftalmologo o;"); 
         $stmt->execute();
         $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $datos =$stmt->fetchAll();  
@@ -13,10 +13,9 @@ class Oftalmologo extends Sistema{ // Cambiado el nombre de la clase
     }
     function Insert($datos){
         $this->connect();
-        // Aquí puedes agregar la lógica para subir la fotografía si es necesario
         if($this->validateOftalmologo($datos)){
             $stmt=$this->conn->prepare("INSERT into oftalmologo (nombre, apellido, especialidad, horario_disponible) 
-            values (:nombre, :apellido, :especialidad, :horario_disponible); "); // Cambiado la consulta SQL
+            values (:nombre, :apellido, :especialidad, :horario_disponible); "); 
             $stmt->bindParam(':nombre', $datos['nombre'] ,PDO::PARAM_STR);
             $stmt->bindParam(':apellido', $datos['apellido'], PDO::PARAM_STR);
             $stmt->bindParam(':especialidad', $datos['especialidad'], PDO::PARAM_STR);
@@ -29,26 +28,25 @@ class Oftalmologo extends Sistema{ // Cambiado el nombre de la clase
     }
 
     function validateOftalmologo($datos){
-        // Puedes agregar aquí la lógica de validación para los datos del oftalmólogo
         if(empty($datos['nombre']) || empty($datos['especialidad'])){
             return false;
         }
         return true;
     }
 
-    function Delete($id_oftalmologo){ // Cambiado el nombre del parámetro
+    function Delete($id_oftalmologo){ 
         $this->connect();
-        $stmt = $this->conn->prepare("DELETE FROM oftalmologo WHERE id_oftalmologo = :id_oftalmologo"); // Cambiado la tabla y el nombre del campo
+        $stmt = $this->conn->prepare("DELETE FROM oftalmologo WHERE id_oftalmologo = :id_oftalmologo"); 
         $stmt->bindParam(':id_oftalmologo', $id_oftalmologo, PDO::PARAM_INT);
         $stmt->execute();
         return $stmt->rowCount();
     }
     
-    function Update($id_oftalmologo, $datos){ // Cambiado el nombre del parámetro
+    function Update($id_oftalmologo, $datos){ 
         $this->connect();
         $stmt = $this->conn->prepare("UPDATE oftalmologo
         SET nombre=:nombre, apellido=:apellido, especialidad=:especialidad, horario_disponible=:horario_disponible
-        WHERE id_oftalmologo=:id_oftalmologo"); // Cambiado la tabla y los nombres de los campos
+        WHERE id_oftalmologo=:id_oftalmologo"); 
         $stmt->bindParam(':id_oftalmologo', $id_oftalmologo, PDO::PARAM_INT);
         $stmt->bindParam(':nombre', $datos['nombre'], PDO::PARAM_STR);
         $stmt->bindParam(':apellido', $datos['apellido'], PDO::PARAM_STR);

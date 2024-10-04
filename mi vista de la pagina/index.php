@@ -1,4 +1,7 @@
 <?php include 'header.php'; ?>   
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
       <!-- Fin del Navbar -->
 <!-- Carrusel -->
@@ -13,14 +16,15 @@
       <img src="images/car1.png" class="d-block w-100" alt="Imagen 1">
       <div class="container">
         <div class="carousel-caption text-start" style="font-family: 'Garamond', serif;">
- 
+          <!-- Texto del carrusel -->
         </div>
       </div>
     </div>  
     <div class="carousel-item">
       <img src="images/car2.png" class="d-block w-100" alt="Imagen 2">
       <div class="container">
-        <div class="carousel-caption text-start" style="font-family: 'Garamond', serif;">    
+        <div class="carousel-caption text-start" style="font-family: 'Garamond', serif;">
+          <!-- Texto del carrusel -->
         </div>
       </div>
     </div> 
@@ -28,7 +32,7 @@
       <img src="images/car3.png" class="d-block w-100" alt="Imagen 3">
       <div class="container">
         <div class="carousel-caption text-start" style="font-family: 'Garamond', serif;">
-         
+          <!-- Texto del carrusel -->
         </div>
       </div>
     </div>
@@ -43,7 +47,8 @@
   </button>
 </div>
 <!-- Fin del Carrusel -->
-<!-- TEXTO 1 PAGINA -->  
+
+<!-- Resto del contenido de la página -->
 
 <div class="container" style="text-align: center;">
   <h1 style="padding-top: 20px;">Óptica Los Ángeles Facilitamos la Compra de Lentes en Línea</h1>
@@ -209,6 +214,8 @@
                 </div>
             </div>
         </section>
+
+
 
 
 
@@ -396,92 +403,160 @@
     .navbar-light .navbar-toggler {border-color: color-mix(in srgb, rgba(248,249,250,1) 80%, #090909); color: color-mix(in srgb, rgba(248,249,250,1) 10%, #090909) }
   </style></div></div>
   
-  <div class="container">
-      <!-- Page Heading -->
-      <div class="row">
-          <div class="col-12">
-              <h1 class="page-header">Contact Us</h1>
-          </div>
-      </div>
-      <!-- /.row -->
-      <div class="row justify-content-center">
-          <section class="mb-3 col-md-6">
-              <h2>Contact Form</h2>
-              <p>Send us a message and we will reply to you as quick as possible.</p>
-              <form id="contact_form" action="/contact/send" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="q_vrrlK-Aw9bW--JkCKKcji2FCgjWKD6zhd62U26cJTCL18szxZXSS_5MZIz5swNoIWNa6BG3WVGNhf-z0dUrQ" autocomplete="off" />
-    <div id="contactpage">
-      
-      <div id="contactpage_email" class="field">
-        <label for="email" class="required">E-mail <em>*</em></label><br>
-        <input class="text" required="required" autocomplete="email" type="email" name="contact[email]" id="contact_email" />
-      </div>
-      <div id="contactpage_name" class="field">
-        <label for="contactpage_name" class="required">Name <em>*</em></label><br>
-        <input class="text" required="required" autocomplete="name" type="text" name="contact[name]" id="contact_name" />
-      </div>
-      <div id="contactpage_phone" class="field">
-        <label for="contactpage_phone">Phone</label><br>
-        <input class="text" autocomplete="tel" type="tel" name="contact[phone]" id="contact_phone" />
-      </div>
-      <div id="contactpage_message">
-        <label for="contactpage_message" class="required">Message <em>*</em></label><br>
-        <textarea class="text" style="height:10em;" required="required" name="contact[message]" id="contact_message">
-  </textarea>
-      </div>
-      <p class="required">* Required Fields</p>
-      <div style="text-align:right;" class="actions">
-          <input type="submit" name="commit" value="Submit" id="submit_contact" class="button" data-disable-with="Submit" />
-      </div>
+ 
+    <!--   CONTACTOS  -->
+    <style>
+    /* Estilos exclusivos para la sección de Contacto */
+    .contact-section {
+        background-color: #f9f9f9; /* Color de fondo */
+        padding: 40px; /* Espaciado interno */
+        border-radius: 10px; /* Bordes redondeados */
+    }
+
+    .contact-section h2 {
+        color: #333; /* Color del título */
+        margin-bottom: 20px; /* Espaciado inferior */
+    }
+
+    .contact-form {
+        margin-bottom: 30px; /* Espaciado inferior */
+    }
+
+    .contact-form label {
+        font-weight: bold; /* Texto en negrita */
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form input[type="tel"],
+    .contact-form textarea {
+        width: 100%; /* Ancho completo */
+        padding: 10px; /* Espaciado interno */
+        margin-bottom: 10px; /* Espaciado inferior */
+        border-radius: 5px; /* Bordes redondeados */
+        border: 1px solid #ccc; /* Borde */
+    }
+
+    .contact-form textarea {
+        height: 100px; /* Altura del área de texto */
+    }
+
+    .contact-form .actions {
+        text-align: right; /* Alineación a la derecha */
+    }
+
+    .contact-form .button {
+        padding: 10px 20px; /* Espaciado interno */
+        background-color: #007bff; /* Color de fondo del botón */
+        color: #fff; /* Color del texto del botón */
+        border: none; /* Sin borde */
+        border-radius: 5px; /* Bordes redondeados */
+        cursor: pointer; /* Cursor */
+    }
+
+    .contact-form .button:hover {
+        background-color: #0056b3; /* Color de fondo del botón al pasar el ratón */
+    }
+
+    .contact-info li {
+        margin-bottom: 10px; /* Espaciado inferior */
+    }
+
+    .contact-info li i {
+        margin-right: 10px; /* Espaciado derecho para el icono */
+    }
+
+    .contact-info li a {
+        color: #007bff; /* Color del enlace */
+    }
+
+    .contact-info li a:hover {
+        color: #0056b3; /* Color del enlace al pasar el ratón */
+    }
+</style>
+
+
+<div class="container">
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-12">
+            <h1 class="page-header">Contactanos</h1>
+        </div>
     </div>
-  
-      <div id="captcha_fd96576d025fdd8b3153b79e177efb27" class="h-captcha" data-size="invisible"></div>
-  <script src="https://js.hcaptcha.com/1/api.js?render=explicit" async></script>
-  <script>
-    window.addEventListener("load", () => {
-      const form = document.getElementById('captcha_fd96576d025fdd8b3153b79e177efb27').closest("form");
-  
-      function challengeBeforeSubmit(submitEvent) {
-        submitEvent.preventDefault();
-  
-        return hcaptcha.execute({ async: true }).then(handleCaptchaResponse).catch(err => {
-          console.error(err);
-        });
-      }
-  
-      function handleCaptchaResponse() {
-        // Allows frontends to catch the submission and boost the request instead,
-        // dispatching the validated form with ajax and avoid reloading the page.
-        const detail = { captcha_id: 'captcha_fd96576d025fdd8b3153b79e177efb27' };
-        const uncancelled = form.dispatchEvent(new Event("jumpseller-captcha-validated", { cancelable: true, detail }));
-        if (uncancelled) form.submit();
-      }
-  
-      hcaptcha.render('captcha_fd96576d025fdd8b3153b79e177efb27', {
-        sitekey: "3bce8b88-f3b0-479b-b984-078c51d2a80f",
-      });
-  
-      form.addEventListener('submit', challengeBeforeSubmit);
-    });
-  </script>
-    <script>
-     function onSubmitContact(token) {
-       document.getElementById("contact_form").submit();
-     }
-   </script>
-  </form>
-          </section>
-              <section class="col-md-6">
-                  <h2>Contact Information</h2>
-                  <ul id="contact-list">
-                          <li>
-                              <i class="fas fa-phone"></i>
-                              <a href="tel:+1123123123">+1 123 123 123</a>
-                          </li>        
-                  </ul>  
-              </section>
-     
-      </div>
-  </div>
+    <!-- /.row -->
+    <div class="row justify-content-center contact-section">
+        <section class="mb-3 col-md-6 contact-form">
+            <h2>CONTACTATE CON NOSOTROS</h2>
+            <p>Si tienes alguna duda puedes contactarte con nuestros distribuidores.</p>
+            <form id="contact_form" action="/contact/send" accept-charset="UTF-8" method="post">
+                <input type="hidden" name="authenticity_token" value="q_vrrlK-Aw9bW--JkCKKcji2FCgjWKD6zhd62U26cJTCL18szxZXSS_5MZIz5swNoIWNa6BG3WVGNhf-z0dUrQ" autocomplete="off">
+                <div id="contactpage">
+                    <div id="contactpage_email" class="field">
+                        <label for="email" class="required">E-mail <em>*</em></label><br>
+                        <input class="text" required="required" autocomplete="email" type="email" name="contact[email]" id="contact_email">
+                    </div>
+                    <div id="contactpage_name" class="field">
+                        <label for="contactpage_name" class="required">Nombre <em>*</em></label><br>
+                        <input class="text" required="required" autocomplete="name" type="text" name="contact[name]" id="contact_name">
+                    </div>
+                    <div id="contactpage_phone" class="field">
+                        <label for="contactpage_phone">Telefono</label><br>
+                        <input class="text" autocomplete="tel" type="tel" name="contact[phone]" id="contact_phone">
+                    </div>
+                    <div id="contactpage_message">
+                        <label for="contactpage_message" class="required">Mensaje <em>*</em></label><br>
+                        <textarea class="text" style="height:10em;" required="required" name="contact[message]" id="contact_message"></textarea>
+                    </div>
+                    <p class="required">* Required Fields</p>
+                    <div style="text-align:right;" class="actions">
+                        <input type="submit" name="commit" value="Submit" id="submit_contact" class="button" data-disable-with="Submit">
+                    </div>
+                </div>
+                <div id="captcha_fd96576d025fdd8b3153b79e177efb27" class="h-captcha" data-size="invisible"></div>
+                <script src="https://js.hcaptcha.com/1/api.js?render=explicit" async></script>
+                <script>
+                    window.addEventListener("load", () => {
+                        const form = document.getElementById('captcha_fd96576d025fdd8b3153b79e177efb27').closest("form");
+
+                        function challengeBeforeSubmit(submitEvent) {
+                            submitEvent.preventDefault();
+
+                            return hcaptcha.execute({ async: true }).then(handleCaptchaResponse).catch(err => {
+                                console.error(err);
+                            });
+                        }
+
+                        function handleCaptchaResponse() {
+                            const detail = { captcha_id: 'captcha_fd96576d025fdd8b3153b79e177efb27' };
+                            const uncancelled = form.dispatchEvent(new Event("jumpseller-captcha-validated", { cancelable: true, detail }));
+                            if (uncancelled) form.submit();
+                        }
+
+                        hcaptcha.render('captcha_fd96576d025fdd8b3153b79e177efb27', {
+                            sitekey: "3bce8b88-f3b0-479b-b984-078c51d2a80f",
+                        });
+
+                        form.addEventListener('submit', challengeBeforeSubmit);
+                    });
+                </script>
+                <script>
+                    function onSubmitContact(token) {
+                        document.getElementById("contact_form").submit();
+                    }
+                </script>
+            </form>
+        </section>
+        <section class="col-md-6">
+            <h2>Informacion de Contacto</h2>
+            <ul class="contact-info" id="contact-list">
+                <li>
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+1123123123">+1 123 123 123</a>
+                </li>
+            </ul>
+        </section>
+    </div>
+</div>
 <!--FIN CONTACTOS -->   
 <!-- /END THE FEATURETTES -->    
         </div><!-- /.container --> 

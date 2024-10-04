@@ -1,7 +1,7 @@
 <?php
 include (__DIR__.'/usuario.class.php');
 $app = new Usuario();
-//$app->checkRol('administrador', true); // Puedes mantener esta línea si es relevante para tu aplicación
+$app->checkRol('Administrador', true); 
 include (__DIR__.'/views/header.php');
 $action = (isset($_GET['action'])) ? $_GET['action'] : null;
 $id_usuario = (isset($_GET['id_usuario'])) ? $_GET['id_usuario'] : null;

@@ -1,11 +1,10 @@
 <?php
 require_once(__DIR__."/sistema.class.php");
 
-class Envio extends Sistema { // Cambio de nombre de clase
+class Envio extends Sistema { 
     function getAll() {
         $this->connect();
-        $stmt = $this->conn->prepare("SELECT e.id_envio, e.metodo_envio, e.fecha_envio, e.fecha_entrega, e.estado_envio
-                                      FROM envio e;"); // Cambio de consulta SQL
+        $stmt = $this->conn->prepare("SELECT e.id_envio, e.metodo_envio, e.fecha_envio, e.fecha_entrega, e.estado_envio FROM envio e;"); // Cambio de consulta SQL
         $stmt->execute();
         $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $datos = $stmt->fetchAll();  
@@ -13,9 +12,9 @@ class Envio extends Sistema { // Cambio de nombre de clase
         return $datos;
     }
 
-    function insert($datos) { // Cambio de nombre de función
+    function insert($datos) { 
         $this->connect();
-        // Aquí va la lógica para subir y validar la fotografía, si es necesario
+        
         $stmt = $this->conn->prepare("INSERT INTO envio (metodo_envio, fecha_envio, fecha_entrega, estado_envio) 
                                       VALUES (:metodo_envio, :fecha_envio, :fecha_entrega, :estado_envio); ");
         $stmt->bindParam(':metodo_envio', $datos['metodo_envio'], PDO::PARAM_STR);
@@ -25,16 +24,14 @@ class Envio extends Sistema { // Cambio de nombre de clase
         $stmt->execute();
         return $stmt->rowCount();
     }
-
-    function delete($id_envio) { // Cambio de nombre de función y de variable
+    function delete($id_envio) { 
         $this->connect();
-        $stmt = $this->conn->prepare("DELETE FROM envio WHERE id_envio = :id_envio"); // Cambio de consulta SQL
+        $stmt = $this->conn->prepare("DELETE FROM envio WHERE id_envio = :id_envio"); 
         $stmt->bindParam(':id_envio', $id_envio, PDO::PARAM_INT);
         $stmt->execute();
         return $stmt->rowCount();
     }
-    
-    function update($id_envio, $datos) { // Cambio de nombre de función y de variable
+    function update($id_envio, $datos) { 
         $this->connect();
         $stmt = $this->conn->prepare("UPDATE envio
                                       SET metodo_envio = :metodo_envio,
@@ -51,7 +48,7 @@ class Envio extends Sistema { // Cambio de nombre de clase
         return $stmt->rowCount();
     }
     
-    function getOne($id_envio) { // Cambio de nombre de función y de variable
+    function getOne($id_envio) { 
         $this->connect();
         $stmt = $this->conn->prepare("SELECT e.id_envio, e.metodo_envio, e.fecha_envio, e.fecha_entrega, e.estado_envio
                                       FROM envio e

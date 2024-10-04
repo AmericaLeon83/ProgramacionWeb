@@ -1,71 +1,69 @@
 <?php
-include (__DIR__.'/marca.class.php');
-$app=new Marca();
-//$app-> checkRol('administrador', true);
-include (__DIR__.'/views/header.php');
-$action=(isset($_GET['action']))?$_GET['action']:null;
-$marca_id=(isset($_GET['marca_id']))?$_GET['marca_id']:null;
-$datos=array();
-$alerta=array();
-switch($action){
-    case 'delete':
-      $fila=$app->Delete($marca_id);
-      if($fila){
-        $alerta['tipo']="success";
-        $alerta['mensaje']='La marca fue eliminada correctamente';
-      }else{
-        $alerta['tipo']="danger";
-        $alerta['mensaje']='No se pudo eliminar la marca';
-      }
-      $datos=$app->getAll();
-      include(__DIR__.'/views/alert.php');
-      include(__DIR__.'/views/marca/index.php');
+include __DIR__ . '\\marca.class.php';
+$app = new Marca();
+include __DIR__ . '\\views\\header.php';
+$app->checkRol('Administrador', true);
+$action = (isset($_GET['action'])) ? $_GET['action'] : null;
+$id_marca = (isset($_GET['id_marca'])) ? $_GET['id_marca'] : null;
+$datos = array();
+$alert = array();
+switch ($action) {
+    case "DELETE":
+        if ($app->delete($id_marca)) {
+            $alert['type'] = 'success';
+            $alert['message'] = '<i class="fa-solid fa-circle-check"></i> Marca eliminada correctamente';
+        } else {
+            $alert['type'] = 'danger';
+            $alert['message'] = '<i class="fa-solid fa-circle-xmark"></i> No se pudo eliminar la marca';
+        }
+        $datos = $app->getAll();
+        include __DIR__ . '\\views\\alert.php';
+        include __DIR__ . '\\views\\marca\\index.php';
         break;
-    case 'create':
-        include(__DIR__.'/views/marca/form.php');
-        break;
-    case 'update':
-        $datos=$app->getOne($marca_id);
-        if(isset($datos["marca_id"])){
-            include(__DIR__.'/views/marca/form.php');
-        }else{
-            $alerta['tipo']="danger";
-            $alerta['mensaje']='La marca especificada no existe';
-            $datos=$datos=$app->getAll();
-            include(__DIR__.'/views/alert.php');
-            include(__DIR__.'/views/marca/index.php');
+    case "UPDATE":
+        $datos = $app->getOne($id_marca);
+        if (isset($datos['id_marca'])) {
+            include __DIR__ . '\\views\\marca\\form.php';
+        } else {
+            $alert['type'] = 'danger';
+            $alert['message'] = '<i class="fa-solid fa-circle-xmark"></i> No se ha encontrado la marca especificada';
+            $datos = $app->getAll();
+            include __DIR__ . '\\views\\alert.php';
+            include __DIR__ . '\\views\\marca\\index.php';
         }
         break;
-    case 'save':
-        $datos=$_POST;
-        if($app->insert($datos)){
-            $alerta['tipo']="success";
-            $alerta['mensaje']='La marca se registró correctamente';
-          }else{
-            $alerta['tipo']="danger";
-            $alerta['mensaje']='No se pudo registrar la marca';
-          }
-        $datos=$datos=$app->getAll();
-        include(__DIR__.'/views/alert.php');
-        include(__DIR__.'/views/marca/index.php');
-    break;    
-    case 'change':
-        $datos=$_POST;
-        if($app->Update($marca_id,$datos)){
-            $alerta['tipo']="success";
-            $alerta['mensaje']='La marca se actualizó correctamente';
-          }else{
-            $alerta['tipo']="danger";
-            $alerta['mensaje']='No se pudo actualizar la marca';
-          }
-        $datos=$app->getAll();
-        include(__DIR__.'/views/alert.php');
-        include(__DIR__.'/views/marca/index.php');
-    break;
+    case "CREATE":
+        include __DIR__ . '\\views\\marca\\form.php';
+        break;
+    case "SAVE":
+        $datos = $_POST;
+        if ($app->insert($datos)) {
+            $alert['type'] = 'success';
+            $alert['message'] = '<i class="fa-solid fa-circle-check"></i> Marca registrada correctamente';
+        } else {
+            $alert['type'] = 'danger';
+            $alert['message'] = '<i class="fa-solid fa-circle-xmark"></i> No se pudo registrar la marca';
+        }
+        $datos = $app->getAll();
+        include __DIR__ . '\\views\\alert.php';
+        include __DIR__ . '\\views\\marca\\index.php';
+        break;
+    case "EDIT":
+        $datos = $_POST;
+        if ($app->update($id_marca, $datos)) {
+            $alert['type'] = 'success';
+            $alert['message'] = '<i class="fa-solid fa-circle-check"></i> Marca actualizada correctamente';
+        } else {
+            $alert['type'] = 'danger';
+            $alert['message'] = '<i class="fa-solid fa-circle-xmark"></i> No se pudo actualizar la marca';
+        }
+        $datos = $app->getAll();
+        include __DIR__ . '\\views\\alert.php';
+        include __DIR__ . '\\views\\marca\\index.php';
+        break;
     default:
-        $datos=$app->getAll();
-        include(__DIR__.'/views/marca/index.php');
-    break;
+        $datos = $app->getAll();
+        include __DIR__ . '\\views\\marca\\index.php';
+        break;
 }
-include (__DIR__.'/views/footer.php');
-?>
+include __DIR__ . '\\views\\footer.php';

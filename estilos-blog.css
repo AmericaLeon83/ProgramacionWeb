@@ -1,58 +1,50 @@
-
 .custom-content {
-    
-/* Estilos específicos para la sección de blog */
-.blog-section {
-    padding-top: 50px; /* Ajusta el espacio superior según sea necesario */
+  .blog-section {
+      padding-top: 50px;
   }
   
   .blog-section h1 {
-    color: #333; /* Cambia el color del título */
+      color: #333;
   }
   
-  /* Estilos para los bloques de contenido */
   .blog-block {
-    margin-bottom: 30px; /* Espacio entre bloques */
+      margin-bottom: 30px;
   }
   
   .blog-block .card {
-    background-color: #f8f9fa; /* Cambia el color de fondo de las tarjetas */
+      background-color: #f8f9fa;
   }
   
   .blog-block .card-title {
-    color: #333; /* Cambia el color del título de la tarjeta */
+      color: #333;
   }
   
-  /* Otros estilos específicos según tus necesidades */
-  
-
-
   .page-header {
-    font-size: 1.5rem; /* Tamaño de la fuente */
-    font-weight: bold; /* Negrita */
-    color: #333; /* Color del texto */
-    text-transform: uppercase; /* Transformar a mayúsculas */
-    letter-spacing: 2px; /* Espaciado entre letras */
-    margin-bottom: 30px; /* Margen inferior */
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
   }
-
+  
   .product-block h4 a {
-    font-size: 1.2rem; /* Tamaño de la fuente */
-    font-weight: bold; /* Negrita */
-    color: #333; /* Color del texto */
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #333;
   }
-
+  
   .price-mob {
-    font-size: 1.1rem; /* Tamaño de la fuente */
-    font-weight: bold; /* Negrita */
-    color: #333; /* Color del texto */
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #333;
   }
-
-
+  
   .text-center {
-    text-align: center;
-}
-.text-justify {
-    text-align: justify;
-}
+      text-align: center;
+  }
+  
+  .text-justify {
+      text-align: justify;
+  }
 }

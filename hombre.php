@@ -1,5 +1,4 @@
 <?php include 'header.php'; ?>   
-<!-- Carrusel -->
 <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -11,27 +10,24 @@
     </div>  
   </div>
 </div>
-<!-- Fin del Carrusel -->
 <style>
     .page-header {
-      font-size: 1.5rem; /* Tamaño de la fuente */
-      font-weight: bold; /* Negrita */
-      color: #333; /* Color del texto */
-      text-transform: uppercase; /* Transformar a mayúsculas */
-      letter-spacing: 2px; /* Espaciado entre letras */
-      margin-bottom: 30px; /* Margen inferior */
+      font-size: 1.5rem; 
+      font-weight: bold; 
+      color: #333;
+      text-transform: uppercase; 
+      letter-spacing: 2px; 
+      margin-bottom: 30px; 
     }
-  
     .product-block h4 a {
-      font-size: 1.2rem; /* Tamaño de la fuente */
-      font-weight: bold; /* Negrita */
-      color: #333; /* Color del texto */
+      font-size: 1.2rem; 
+      font-weight: bold; 
+      color: #333; 
     }
-  
     .price-mob {
-      font-size: 1.1rem; /* Tamaño de la fuente */
-      font-weight: bold; /* Negrita */
-      color: #333; /* Color del texto */
+      font-size: 1.1rem; 
+      font-weight: bold; 
+      color: #333;
     }
   </style>
   <!-- IMAGEN PUBLICIDAD -->
@@ -42,7 +38,6 @@
       </a>
     </div>
   </div>
-  <!-- Product section-->
   <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
@@ -66,10 +61,10 @@
             </div>
             <div class="container px-4 px-lg-5 my-5">
         <div class="row gx-4 gx-lg-5 align-items-center">
-            <div class="col-md-6 order-md-2"> <!-- Cambio de orden de las columnas -->
+            <div class="col-md-6 order-md-2"> 
                 <img class="card-img-top mb-5 mb-md-0" src="images/hombre/fotocromaticos.png" alt="..." />
             </div>
-            <div class="col-md-6 order-md-1"> <!-- Cambio de orden de las columnas -->
+            <div class="col-md-6 order-md-1">
                 <div class="small mb-1">SKU: BST-498</div>
                 <h1 class="display-5 fw-bolder">Lentes Fotocromáticos </h1>
                 <div class="fs-5 mb-5">
@@ -108,20 +103,18 @@
             </div>
         </section>
 
-
-         <!--##### SELECCION DE MODELOS ######-->
 <style>
     .product-image {
-        max-width: 230%; /* Ajuste del ancho máximo de las imágenes */
+        max-width: 230%; 
         height: auto;
     }
 </style>
 <div class="container">
-    <!-- Latest Products -->
+  
     <div class="row justify-content-between">
-    <div class="col-md-1 col-4 mb-3"> <!-- Cambio de col-md-auto a col-md-1 -->
+    <div class="col-md-1 col-4 mb-3"> 
     <div class="product-block" data-productid="3514295">
-        <a href="#lentes_aviador"> <!-- Anchor para la primera imagen -->
+        <a href="#lentes_aviador"> 
             <img class="product-image" src="images/armazones/CLIC_AVIADOR.png" alt="Camara Nikon Reflex D7200 + Lente 18-140" />
         </a>
         <div class="caption text-left">
@@ -130,10 +123,10 @@
         </div>
     </div>
 </div>
-        <!-- Repite el mismo patrón para cada imagen -->
-        <div class="col-md-1 col-4 mb-3"> <!-- Cambio de col-md-auto a col-md-1 -->
+      
+        <div class="col-md-1 col-4 mb-3"> 
             <div class="product-block" data-productid="3514295">
-            <a href="#lentes_corazon"> <!-- Anchor para la primera imagen -->
+            <a href="#lentes_corazon"> 
                     <img class="product-image" src="images/armazones/CORAZON_CLIC.png" alt="Camara Nikon Reflex D7200 + Lente 18-140" />
                 </a>
                 <div class="caption text-left">
@@ -142,10 +135,10 @@
                 </div>
             </div>
         </div>
-        <!-- Repite el mismo patrón para cada imagen -->
-        <div class="col-md-1 col-4 mb-3"> <!-- Cambio de col-md-auto a col-md-1 -->
+       
+        <div class="col-md-1 col-4 mb-3"> 
             <div class="product-block" data-productid="3514295">
-            <a href="#lentes_cuadrados"> <!-- Anchor para la primera imagen -->
+            <a href="#lentes_cuadrados"> 
                     <img class="product-image" src="images/armazones/CUADRADO_CLIC.png" alt="Camara Nikon Reflex D7200 + Lente 18-140" />
                 </a>
                 <div class="caption text-left">
@@ -154,10 +147,10 @@
                 </div>
             </div>
         </div>
-        <!-- Repite el mismo patrón para cada imagen -->
-        <div class="col-md-1 col-4 mb-3"> <!-- Cambio de col-md-auto a col-md-1 -->
+    
+        <div class="col-md-1 col-4 mb-3"> 
             <div class="product-block" data-productid="3514295">
-            <a href="#lentes_gato"> <!-- Anchor para la primera imagen -->
+            <a href="#lentes_gato"> 
                     <img class="product-image" src="images/armazones/GATO_CLIC.png" alt="Camara Nikon Reflex D7200 + Lente 18-140" />
                 </a>
                 <div class="caption text-left">
@@ -167,10 +160,9 @@
             </div>
         </div>
 
-        <!-- Repite el mismo patrón para cada imagen -->
-        <div class="col-md-1 col-4 mb-3"> <!-- Cambio de col-md-auto a col-md-1 -->
+        <div class="col-md-1 col-4 mb-3"> 
             <div class="product-block" data-productid="3514295">
-            <a href="#lentes_cuadrados"> <!-- Anchor para la primera imagen -->
+            <a href="#lentes_cuadrados"> 
                     <img class="product-image" src="images/armazones/MASVENDIDOS.png" alt="Camara Nikon Reflex D7200 + Lente 18-140" />
                 </a>
                 <div class="caption text-left">
@@ -179,10 +171,10 @@
                 </div>
             </div>
         </div>
-        <!-- Repite el mismo patrón para cada imagen -->
-        <div class="col-md-1 col-4 mb-3"> <!-- Cambio de col-md-auto a col-md-1 -->
+       
+        <div class="col-md-1 col-4 mb-3"> 
             <div class="product-block" data-productid="3514295">
-            <a href="#lentes_cuadrados"> <!-- Anchor para la primera imagen -->
+            <a href="#lentes_cuadrados"> 
                     <img class="product-image" src="images/armazones/OFERTAS_CLIC.png" alt="Camara Nikon Reflex D7200 + Lente 18-140" />
                 </a>
                 <div class="caption text-left">
@@ -195,8 +187,7 @@
 </div><!-- /.container -->
 </div><div id='component-1408626' class='theme-component show' ><div id="banners-1408626" class="container">
 
-        <!--||||||LENTES CUADRADOS|||||-->
-        <div id="lentes_cuadrados" class="row"> <!-- ID cambiado para que coincida con el enlace -->
+        <div id="lentes_cuadrados" class="row"> 
     <div class="col-md-12">
     </div>
 </div>
@@ -258,8 +249,7 @@
           </div>
         </div>
       </div>
-    </div><!-- /.row -->
-  <!-- Agrega un salto de columna -->
+    </div>
   <div class="row">
   <div class="col-md-3 col-6">
         <div class="product-block" data-productid="3514295">
@@ -320,14 +310,12 @@
 </div><!-- /.container -->
 </div><div id='component-1408626' class='theme-component show' ><div id="banners-1408626" class="container">
 
-    <!--~~~~~~~~~~FIN DE LENTES CUADRADOS~~~~~~~~~~~~-->
-        <!--||||||LENTES CORAZON|||||-->
-        <div id="lentes_corazon" class="row"> <!-- ID cambiado para que coincida con el enlace -->
+        <div id="lentes_corazon" class="row"> 
     <div class="col-md-12">
     </div>
     </div>
     <div class="container">
-  <!-- Latest Products -->
+
   <div class="row">
   <div class="col-md-3 col-6">
         <div class="product-block" data-productid="3514295">
@@ -507,8 +495,7 @@
           </div>
         </div>
       </div>
-    </div><!-- /.row -->
-  <!-- Agrega un salto de columna -->
+    </div>
   <div class="row">
   <div class="col-md-3 col-6">
         <div class="product-block" data-productid="3514295">
@@ -569,9 +556,7 @@
 </div><!-- /.container -->
 </div><div id='component-1408626' class='theme-component show' ><div id="banners-1408626" class="container">
 
-    <!--~~~~~~~~~~FIN DE LENTES CUERNO~~~~~~~~~~~~-->
-     <!--|||||||LENTES OJO DE GATO|||||||-->
-     <div id="lentes_gato" class="row"> <!-- ID cambiado para que coincida con el enlace -->
+     <div id="lentes_gato" class="row"> 
     <div class="col-md-12">
     </div>
      </div>

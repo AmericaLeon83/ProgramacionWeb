@@ -21,9 +21,7 @@ hora-->
     });
 </script>
 
-<!-- Agrega tus estilos CSS aquí -->
 <style>
-    /* Estilos generales */
 body {
     background-color: #F5F5F5;
     font-family: Arial, sans-serif;
@@ -70,14 +68,14 @@ input[type="submit"]:hover {
     background-color: #003F7F;
 }
 
-/* Estilos específicos para el formulario especial */
+
 .special-form {
     background-color: transparent;
     padding: 0;
     box-shadow: none;
     width: 75%; /* Ajustar al ancho del contenedor */
-    margin: 0 auto; /* Centrar horizontalmente */
-    max-width: 400px; /* Ajustar el ancho máximo */
+    margin: 0 auto; 
+    max-width: 400px; 
 }
 
 .special-form .form-control {
@@ -100,7 +98,7 @@ input[type="submit"]:hover {
 
 <!-- ``````para las tarjetas````````-->
 <style>
-    /* Estilos para las tarjetas de pago */
+    
     .payment {
         list-style: none;
         padding: 0;
@@ -131,27 +129,24 @@ input[type="submit"]:hover {
         <h1>Bienvenido a la agenda de citas</h1>
         <p>Te asignaremos a uno de nuestros mejores oftalmólogos</p>
         <div id='calendar'></div>
-    <form action="registrar_paciente.php" method="post">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre">
-        <br>
-        <label for="apellido">Apellido:</label>
-        <input type="text" id="apellido" name="apellido">
-        <br>
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email">
-        <br>
-        <label for="telefono">Teléfono:</label>
-        <input type="text" id="telefono" name="telefono">
-        <br>
-        <label for="fecha">Fecha de cita:</label>
-        <input type="text" id="fecha" name="fecha">
-        <br>
-        <label for="hora">Hora de cita:</label>
-        <input type="text" id="hora" name="hora">
-        <br>
-        <input type="submit" value="Registrar paciente">
-    </form>
-  <!--FIN formulario agendar cita -->
-
-    <?php include 'footer.php'; ?>
+        <form action="registrar_paciente.php" method="post">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre">
+    <br>
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" name="apellido">
+    <br>
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email">
+    <br>
+    <label for="telefono">Teléfono:</label>
+    <input type="text" id="telefono" name="telefono">
+    <br>
+    <label for="fecha">Fecha de cita:</label>
+    <input type="text" id="fecha" name="fecha">
+    <br>
+    <label for="hora">Hora de cita:</label>
+    <input type="text" id="hora" name="hora">
+    <br>
+    <input type="submit" value="Registrar paciente">
+</form>

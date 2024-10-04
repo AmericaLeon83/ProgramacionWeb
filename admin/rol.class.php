@@ -50,7 +50,6 @@ class Rol extends Sistema{
         $stmt->execute();
         return $stmt->rowCount();
     }
-    
     function getOne($id_rol){
         $this->connect();
         $stmt = $this->conn->prepare("SELECT r.id_rol, r.rol 

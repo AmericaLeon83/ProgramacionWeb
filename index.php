@@ -1,7 +1,15 @@
-<?php include 'header.php'; ?>   
+<?php
+include __DIR__ . '/admin/marca.class.php';
+include __DIR__ . '/header.php';
+$webMarcas = new Marca();
+$marcas = array();
+$marcas = $webMarcas->getAll();
+?>
 
-      <!-- Fin del Navbar -->
-<!-- Carrusel -->
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<!-- Carrusel con imágenes más grandes -->
 <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -10,29 +18,36 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="images/car1.png" class="d-block w-100" alt="Imagen 1">
+      <img src="images/banner1.png" class="d-block w-100" style="height: 65vh;" alt="Imagen 1">
       <div class="container">
-        <div class="carousel-caption text-start" style="font-family: 'Garamond', serif;">
- 
+        <div class="carousel-caption text-start" style="font-family: 'Garamond', serif; background-color: rgba(0, 0, 0, 0.5); padding: 20px;">
+        
+        <p style="font-size: 1.2rem; color: white;">Intercambia tu tiempo y transforma vidas.</p>
         </div>
       </div>
-    </div>  
+    </div>
+    
     <div class="carousel-item">
-      <img src="images/car2.png" class="d-block w-100" alt="Imagen 2">
+      <img src="images/carrito11.png" class="d-block w-100" style="height: 65vh;" alt="Imagen 2">
       <div class="container">
-        <div class="carousel-caption text-start" style="font-family: 'Garamond', serif;">    
+        <div class="carousel-caption text-start" style="font-family: 'Garamond', serif; background-color: rgba(0, 0, 0, 0.5); padding: 20px;">
+          <h1 style="font-size: 2.5rem; color: white; font-weight: bold;">Contribuye a tu Comunidad</h1>
+          <p style="font-size: 1.2rem; color: white;">Comparte tu tiempo, tus habilidades y tus conocimientos.</p>
         </div>
       </div>
-    </div> 
+    </div>
+    
     <div class="carousel-item">
-      <img src="images/car3.png" class="d-block w-100" alt="Imagen 3">
+      <img src="images/carrito2.png" class="d-block w-100" style="height: 65vh;" alt="Imagen 3">
       <div class="container">
-        <div class="carousel-caption text-start" style="font-family: 'Garamond', serif;">
-         
+        <div class="carousel-caption text-start" style="font-family: 'Garamond', serif; background-color: rgba(0, 0, 0, 0.5); padding: 20px;">
+          <h1 style="font-size: 2.5rem; color: white; font-weight: bold;">Fortaleciendo Redes Comunitarias</h1>
+          <p style="font-size: 1.2rem; color: white;">Un espacio de intercambio de habilidades y conocimiento.</p>
         </div>
       </div>
     </div>
   </div>
+
   <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
@@ -42,338 +57,193 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-<!-- Fin del Carrusel -->
-<!-- TEXTO 1 PAGINA -->  
 
-<div class="container" style="text-align: center;">
-  <h1 style="padding-top: 20px;">Óptica Los Ángeles Facilitamos la Compra de Lentes en Línea</h1>
-  <p>Ofrecemos una amplia variedad de lentes graduados, lentes de sol y más de 700 armazones y micas con protección UV de calidad y al mejor precio. Además, contamos con más de 17 colores de tinte y 6 tratamientos como antirreflejante, polarizado, fotocrómico, bloqueo de luz azul, entre otros, para cubrir todas sus necesidades ópticas.</p>
+
+<!-- Texto introductorio con diseño ajustado -->
+<div class="container text-center" style="margin-top: 50px;">
+  <h1 style="font-family: 'Montserrat', sans-serif; font-size: 3.5rem; color: #004d40; font-weight: bold;">Banco De Tiempo Para el Voluntariado Solidario</h1>
+  <p style="font-size: 1.8rem; color: #555; font-style: italic;">"Creando espacios para el intercambio de habilidades y conocimientos a través del voluntariado solidario".</p>
 </div>
 
-<!-- FIN DEL TEXTO -->
+<!-- Beneficios para voluntarios -->
+<div class="container marketing" style="margin-top: 70px;">
+  <h2 style="font-family: 'Garamond', serif; font-size: 2.8rem; color: #004d40; text-align: center; font-weight: bold;">Beneficios para Voluntarios</h2>
+  <ul style="font-size: 1.5rem; color: #555; margin-top: 30px; line-height: 1.8;">
+    <li><strong>Crédito complementario:</strong> Al cumplir con las tareas asignadas en cada proyecto.</li>
+    <li><strong>Horas de servicio social:</strong> Para alumnos con el 70% de sus créditos acumulados.</li>
+  </ul>
+</div>
+
+<!-- Objetivos del proyecto -->
+<div class="container" style="margin-top: 70px;">
+  <h2 style="font-family: 'Garamond', serif; font-size: 2.8rem; color: #004d40; text-align: center; font-weight: bold;">Objetivos del Banco de Tiempo</h2>
+  <p style="font-size: 1.5rem; color: #555; margin-top: 30px; line-height: 1.8; text-align: justify;">Nuestro objetivo es crear un espacio en el que la comunidad pueda intercambiar habilidades y conocimiento, fortaleciendo los lazos sociales y promoviendo la colaboración entre personas con diversos talentos.</p>
+</div>
+
+<!-- Nuestras Campanas -->
+<div class="container" style="margin-top: 70px;">
+  <h2 style="font-family: 'Garamond', serif; font-size: 2.8rem; color: #004d40; text-align: center; font-weight: bold;">Nuestros Voluntariados Disponibles Son</h2>
+</div>
 
 
-
-
- <!-- FIN DEL TEXTO -->         
-  <!-- FILA DE CIRCULOS -->      
+<!-- FILA DE CÍRCULOS -->      
 <div class="container marketing">
-  
   <div class="row justify-content-center">
     <div class="col-lg-2">
-      <a href="mujer.php">
-        <img src="images/mujer.png" class="bd-placeholder-img rounded-circle mx-auto d-block" width="250" height="250" aria-label="Placeholder" alt="Imagen 1">
+      <a href="reciclaje.php">
+        <img src="images/resiclaje.png" class="bd-placeholder-img rounded-circle mx-auto d-block" width="250" height="250" aria-label="Placeholder" alt="Campaña de Reciclaje">
       </a>
-      <h4 class="fw-normal text-center">Mujer</h4>
-    </div><!-- /.col-lg-2 -->
+      <h4 class="fw-normal text-center">Reciclaje y Reducción de Residuos</h4>
+    </div>
     <div class="col-lg-2">
-      <a href="hombre.php">
-        <img src="images/hombre.png" class="bd-placeholder-img rounded-circle mx-auto d-block" width="250" height="250" aria-label="Placeholder" alt="Imagen 2">
+      <a href="salud_mental.php">
+        <img src="images/vandalismo.png" class="bd-placeholder-img rounded-circle mx-auto d-block" width="250" height="250" aria-label="Placeholder" alt="Campaña de Salud Mental">
       </a>
-      <h4 class="fw-normal text-center">Hombre</h4>
-    </div><!-- /.col-lg-2 -->
+      <h4 class="fw-normal text-center">Campaña Anti Vandalismor</h4>
+    </div>
     <div class="col-lg-2">
-      <a href="lentesol.php">
-        <img src="images/lentessol.png" class="bd-placeholder-img rounded-circle mx-auto d-block" width="250" height="250" aria-label="Placeholder" alt="Imagen 3">
+      <a href="voluntariado.php">
+        <img src="images/Bullying.png" class="bd-placeholder-img rounded-circle mx-auto d-block" width="250" height="250" aria-label="Placeholder" alt="Voluntariado Comunitario">
       </a>
-      <h4 class="fw-normal text-center">Lentes de Sol (40% + 20% dto)</h4>
-    </div><!-- /.col-lg-2 -->
+      <h4 class="fw-normal text-center">Campaña Anti Bullying</h4>
+    </div>
     <div class="col-lg-2">
-      <a href="lenteAzul.php">
-        <img src="images/lentesazul.png" class="bd-placeholder-img rounded-circle mx-auto d-block" width="250" height="250" aria-label="Placeholder" alt="Imagen 4">
+      <a href="inclusion.php">
+        <img src="images/graffiti.png" class="bd-placeholder-img rounded-circle mx-auto d-block" width="250" height="250" aria-label="Placeholder" alt="Campaña de Inclusión y Diversidad">
       </a>
-      <h4 class="fw-normal text-center">Filtro de luz azul (-30% en Micas)</h4>
-    </div><!-- /.col-lg-2 -->
+      <h4 class="fw-normal text-center">Campaña Anti Grafiti</h4>
+    </div>
     <div class="col-lg-2">
-      <a href="ofertas.php">
-        <img src="images/ofertas.png" class="bd-placeholder-img rounded-circle mx-auto d-block" width="250" height="250" aria-label="Placeholder" alt="Imagen 5">
+      <a href="deporte.php">
+        <img src="images/feriadelasalud.png" class="bd-placeholder-img rounded-circle mx-auto d-block" width="250" height="250" aria-label="Placeholder" alt="Campaña de Deporte y Actividad Física">
       </a>
-      <h4 class="fw-normal text-center">Desde $99 & -20% Extra</h4>
-    </div><!-- /.col-lg-2 -->
-  </div><!-- /.row -->
-</div><!-- /.container -->
+      <h4 class="fw-normal text-center">Feria de la Salud</h4>
+    </div>
+  </div>
+</div>
+
+<main class="container">
+  <div class="custom-content">
+    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+      <div class="row">
+        <div class="col-lg-6 px-0">
+          <h1 class="display-4 fst-italic">Nuestras Principales Campañas</h1>
+          <p class="lead my-3">Conoce nuestras iniciativas en el campus para mejorar la convivencia y el entorno estudiantil.</p>
+        </div>
+        
+        <!-- Imagen alineada a la derecha -->
+        <div class="col-lg-6 d-flex justify-content-end">
+          <img src="images/tec1.png" class="img-fluid" alt="Campañas del campus" style="max-width: 100%; height: auto;">
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary-emphasis">Campaña Anti Vandalismo</strong>
+            <h3 class="mb-0">Cuidemos Nuestro Espacio</h3>
+            <p class="card-text mb-auto">Concientización para cuidar el mobiliario del campus y prevenir el vandalismo.</p>
+            <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                    Continue reading
+                    <svg class="bi"><use xlink:href="#chevron-right"/></svg>
+                  </a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                  <img src="images/van1.png" class="bd-placeholder-img" width="300" height="300" alt="Thumbnail">
+                </div>
+              </div>
+              </div>
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success-emphasis">Campaña Anti Grafiti</strong>
+            <h3 class="mb-0">Espacios Libres de Grafiti</h3>
+            <p class="card-text mb-auto">Promoción de espacios limpios y cuidados en áreas comunes del campus.</p>
+            <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                    Continue reading
+                    <svg class="bi"><use xlink:href="#chevron-right"/></svg>
+                  </a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                  <img src="images/g1.png" class="bd-placeholder-img" width="300" height="300" alt="Thumbnail">
+                </div>
+              </div>
+              </div>
+    </div>
+
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-danger-emphasis">Campaña Anti Bullying</strong>
+            <h3 class="mb-0">Fomentemos el Respeto</h3>
+            <p class="card-text mb-auto">Iniciativa para fomentar la convivencia pacífica y el respeto entre los estudiantes.</p>
+            <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                    Continue reading
+                    <svg class="bi"><use xlink:href="#chevron-right"/></svg>
+                  </a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                  <img src="images/campanaB.png" class="bd-placeholder-img" width="300" height="300" alt="Thumbnail">
+                </div>
+              </div>
+              </div>
+
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-warning-emphasis">Feria de la Salud</strong>
+            <h3 class="mb-0">Cuidemos Nuestra Salud</h3>
+            <p class="card-text mb-auto">Participación en la feria de salud organizada por el Instituto Tecnológico de Celaya.</p>
+            <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                    Continue reading
+                    <svg class="bi"><use xlink:href="#chevron-right"/></svg>
+                  </a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                  <img src="images/feriaDSalud.png" class="bd-placeholder-img" width="300" height="300" alt="Thumbnail">
+                </div>
+              </div>
+              </div>
+    </div>
+  </div>
+</main>
 
 
   <!-- IMAGEN PUBLICIDAD -->
   <div class="row justify-content-center mt-5">
     <div class="col-lg-6">
-      <a href="tu_enlace.html">
-        <img src="images/publicidad.png" class="img-fluid mx-auto my-auto" style="width: 100%; height: auto; max-width: 1800px; max-height: 1400px;" alt="Imagen publicitaria">
+      <a href="productos.php">
+        <img src="images/an1.png" class="img-fluid mx-auto my-auto" style="width: 100%; height: auto; max-width: 1800px; max-height: 1400px;" alt="Imagen publicitaria">
       </a>
     </div>
   </div>
-<!-- OFERTAS -->
-<!-- Related items section-->
-<section class="py-5 bg-light">
-            <div class="container px-4 px-lg-5 mt-5">
-                <h2 class="fw-bolder mb-4">OFERTAS DESTACADAS</h2>
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Fancy Product</h5>
-                                    <!-- Product price-->
-                                    $40.00 - $80.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Sale badge-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Special Item</h5>
-                                    <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">$20.00</span>
-                                    $18.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Sale badge-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Sale Item</h5>
-                                    <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">$50.00</span>
-                                    $25.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Popular Item</h5>
-                                    <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    <!-- Product price-->
-                                    $40.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-
-       <div class="container marketing">
-    <h3 class="animated-title" style="color: #900d78;">Los Más vendidos</h3>
-    <section>
-        <div class="row">
-            <?php
-              require 'vendor/autoload.php';
-              $producto = new Kawschool\Producto;
-              $info_productos = $producto->mostrar();
-              $cantidad = count($info_productos);
-              if($cantidad > 0){
-                for($x =0; $x < $cantidad; $x++){
-                  $item = $info_productos[$x];
-            ?>
-            <div class="col-md-3">
-                <div class="card mb-3">
-                    <?php
-                        $foto = 'upload/'.$item['foto'];
-                        if(file_exists($foto)){
-                    ?>
-                    <img src="<?php print $foto; ?>" class="card-img-top" alt="...">
-                    <?php }else{?>
-                    <img src="assets/imagenes/not-found.jpg" class="card-img-top" alt="...">
-                    <?php }?>
-                    <div class="card-body">
-                        <h5 class="card-title"><?php print $item['nombre_producto'] ?></h5>
-                        <p class="card-text">$<?php print $item['precio'] ?></p>
-                        <a href="carrito.php?id=<?php print $item['id'] ?>" class="btn btn-primary">Comprar</a>
-                    </div>
-                </div>
-            </div>
-            <?php
-                }
-            }else{?>
-            <h4>NO HAY REGISTROS</h4>
-            <?php }?>
-        </div>
-    </section>
-</div>
-
-
-
-<!--``````````````````````````````````````````````````````````````````````````````````--> 
-<div class="container marketing">
-  <h3 class="animated-title" style="color: #900d78;">Los Más vendidos</h3>
-<!-- /PRODUCTOS -->   
-<section>
-  <div class="row">
-    <div class="col-md-3">
-      <div class="card mb-3">
-        <img src="images/destacados/pro1.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Lentes VisionClarity</h5>
-          <p class="card-text">$349.99</p>
-          <a href="#" class="btn btn-primary">Comprar</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card mb-3">
-        <img src="images/destacados/pro2.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Lentes SunGlow</h5>
-          <p class="card-text">$399.99</p>
-          <a href="#" class="btn btn-primary">Comprar</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card mb-3">
-        <img src="images/destacados/pro3.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Lentes CrystalClear</h5>
-          <p class="card-text">$360.00</p>
-          <a href="#" class="btn btn-primary">Comprar</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card mb-3">
-        <img src="images/destacados/pro4.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Lentes OptiView</h5>
-          <p class="card-text">$149.99</p>
-          <a href="#" class="btn btn-primary">Comprar</a>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-3">
-        <div class="card mb-3">
-          <img src="images/destacados/pro5.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Lentes ClarityMax</h5>
-            <p class="card-text">$199.99</p>
-            <a href="#" class="btn btn-primary">Comprar</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card mb-3">
-          <img src="images/destacados/pro6.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Lentes OptiFlex</h5>
-            <p class="card-text">$220.99</p>
-            <a href="#" class="btn btn-primary">Comprar</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card mb-3">
-          <img src="images/destacados/pro7.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Lentes SunShine</h5>
-            <p class="card-text">$150.00</p>
-            <a href="#" class="btn btn-primary">Comprar</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card mb-3">
-          <img src="images/destacados/pro8.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Lentes ClearVision</h5>
-            <p class="card-text">$200.50</p>
-            <a href="#" class="btn btn-primary">Comprar</a>
-          </div>
-        </div>
-      </div>
+  <!-- IMAGEN PUBLICIDAD -->
+  <div class="row justify-content-center mt-5">
+    <div class="col-lg-6">
+      <a href="productos.php">
+        <img src="images/an2.png" class="img-fluid mx-auto my-auto" style="width: 100%; height: auto; max-width: 1800px; max-height: 1400px;" alt="Imagen publicitaria">
+      </a>
     </div>
   </div>
-</section>
-<!-- COMPRAR POR TIPO -->
-<div class="row text-center">
-  <h3 class="animated-title" style="color: #900d78;">Comprar por</h3>
-  <p class="lead" style="color: #000000;">Descubre la mejor opción para ti en lentes que se adapten a tu estilo y personalidad.</p>
-  <div class="col-lg-4">
-    <img src="images/forma_de_armazon.png" class="bd-placeholder-img" width="250" height="200" role="img" aria-label="Imagen 1" alt="Imagen 1">
-    <h2 class="fw-normal mt-4">Forma de Armazón</h2>
-    <p><a class="btn btn-secondary" href="armazones.php">Ver todos &raquo;</a></p>
-  </div><!-- /.col-lg-4 -->
-  <div class="col-lg-4">
-    <img src="images/color_de_armazon.png" class="bd-placeholder-img" width="250" height="200" role="img" aria-label="Imagen 2" alt="Imagen 2">
-    <h2 class="fw-normal mt-4">Color de Armazón</h2>
-    <p><a class="btn btn-secondary" href="comodidad_ajuste.html">Ver todos &raquo;</a></p>
-  </div><!-- /.col-lg-4 -->
-  <div class="col-lg-4">
-    <img src="images/material_de_armazon.png" class="bd-placeholder-img" width="250" height="200" role="img" aria-label="Imagen 3" alt="Imagen 3">
-    <h2 class="fw-normal mt-4">Material de Armazón</h2>
-    <p><a class="btn btn-secondary" href="mantenimiento_gafas.html">Ver todos &raquo;</a></p>
-  </div><!-- /.col-lg-4 -->
-</div>
 
-       <!-- START THE FEATURETTES -->
+
+<div class="container marketing">
+ 
 
 <hr class="featurette-divider">
-<h3 class="animated-title" style="color: #900d78;">Armazones</h3>
+<h3 class="animated-title" style="color: #900d78;">Banco de Tiempo</h3>
 <div class="row featurette">
   <div class="col-md-7">
-    <h2 class="featurette-heading fw-normal lh-1">Estilos y Personalidad<span class="text-body-secondary"></span></h2>
-    <p class="lead">Para la óptica Los Ángeles, es importante que sepas escoger la mejor opción para ti en lentes. Contamos con una amplia variedad de estilos y modelos que se ajustan a tu personalidad y necesidades visuales.</p>
+    <h2 class="featurette-heading fw-normal lh-1">Intercambio de Habilidades<span class="text-body-secondary"></span></h2>
+    <p class="lead">El Banco de Tiempo es una iniciativa que te permite intercambiar tus habilidades y conocimientos con otros miembros de la comunidad. Aquí, el tiempo es la moneda, y cada hora de ayuda que ofreces te permite recibir una hora de ayuda en algo que necesites.</p>
   </div>
   <div class="col-md-5">
-    <img src="images/servicios1.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" role="img" aria-label="Placeholder: 500x500" alt="Imagen 1">
+    <img src="images/i1.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" role="img" aria-label="Placeholder: 500x500" alt="Intercambio de Habilidades">
   </div>
 </div>
 
@@ -381,19 +251,17 @@
 
 <div class="row featurette">
   <div class="col-md-7 order-md-2">
-    <h2 class="featurette-heading fw-normal lh-1">Comodidad y Ajuste <span class="text-body-secondary"></span></h2>
-    <p class="lead">Antes de comprar lentes, te ofrecemos citas previas para garantizar la comodidad y el ajuste perfecto. Nuestros especialistas te brindarán atención personalizada para asegurarse de que tus lentes se adapten de manera óptima a tu rostro y necesidades.</p>
+    <h2 class="featurette-heading fw-normal lh-1">Construcción de Comunidad<span class="text-body-secondary"></span></h2>
+    <p class="lead">El Banco de Tiempo fomenta la construcción de una comunidad más unida y solidaria. Al participar, no solo intercambias servicios, sino que también fortaleces los lazos sociales y contribuyes a un entorno de colaboración y apoyo mutuo.</p>
   </div>
   <div class="col-md-5 order-md-1">
-    <img src="images/servicios2.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" role="img" aria-label="Placeholder: 500x500" alt="Imagen 2">
+    <img src="images/i2.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" role="img" aria-label="Placeholder: 500x500" alt="Construcción de Comunidad">
   </div>
 </div>
 <hr class="featurette-divider">
 
 
  <!--INICIO CONTACTOS --> 
-       <!-- META CONTACTOS -->
-<!-- Facebook Meta tags for Product -->
 <script src="//assets.jumpseller.com/public/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="https://assets.jumpseller.com/store/bootstrap/themes/607236/color_pickers.min.css?1687821175"/>
@@ -403,8 +271,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBWEC7QQTS"></script>
 <script src="https://files.jumpseller.com/javascripts/dist/jumpseller-2.0.0.js" defer="defer"></script>
 <!-- FIN META -->
-<div id='top_components'><div id='component-1408630' class='theme-component show' ><!-- Navigation -->
-                <!-- Page Content -->
+<div id='top_components'><div id='component-1408630' class='theme-component show' >
   
     <section class="container">
       <div class="row">
@@ -436,94 +303,157 @@
     .navbar-light .navbar-toggler {border-color: color-mix(in srgb, rgba(248,249,250,1) 80%, #090909); color: color-mix(in srgb, rgba(248,249,250,1) 10%, #090909) }
   </style></div></div>
   
-  <div class="container">
-      <!-- Page Heading -->
-      <div class="row">
-          <div class="col-12">
-              <h1 class="page-header">Contact Us</h1>
-          </div>
-      </div>
-      <!-- /.row -->
-      <div class="row justify-content-center">
-          <section class="mb-3 col-md-6">
-              <h2>Contact Form</h2>
-              <p>Send us a message and we will reply to you as quick as possible.</p>
-              <form id="contact_form" action="/contact/send" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="q_vrrlK-Aw9bW--JkCKKcji2FCgjWKD6zhd62U26cJTCL18szxZXSS_5MZIz5swNoIWNa6BG3WVGNhf-z0dUrQ" autocomplete="off" />
-    <div id="contactpage">
-      
-      <div id="contactpage_email" class="field">
-        <label for="email" class="required">E-mail <em>*</em></label><br>
-        <input class="text" required="required" autocomplete="email" type="email" name="contact[email]" id="contact_email" />
-      </div>
-      <div id="contactpage_name" class="field">
-        <label for="contactpage_name" class="required">Name <em>*</em></label><br>
-        <input class="text" required="required" autocomplete="name" type="text" name="contact[name]" id="contact_name" />
-      </div>
-      <div id="contactpage_phone" class="field">
-        <label for="contactpage_phone">Phone</label><br>
-        <input class="text" autocomplete="tel" type="tel" name="contact[phone]" id="contact_phone" />
-      </div>
-      <div id="contactpage_message">
-        <label for="contactpage_message" class="required">Message <em>*</em></label><br>
-        <textarea class="text" style="height:10em;" required="required" name="contact[message]" id="contact_message">
-  </textarea>
-      </div>
-      <p class="required">* Required Fields</p>
-      <div style="text-align:right;" class="actions">
-          <input type="submit" name="commit" value="Submit" id="submit_contact" class="button" data-disable-with="Submit" />
-      </div>
+ 
+    <!--   CONTACTOS  -->
+    <style>
+    .contact-section {
+        background-color: #f9f9f9; 
+        padding: 40px; 
+        border-radius: 10px; 
+    }
+
+    .contact-section h2 {
+        color: #333; 
+        margin-bottom: 20px;
+    }
+
+    .contact-form {
+        margin-bottom: 30px; 
+    }
+
+    .contact-form label {
+        font-weight: bold; 
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form input[type="tel"],
+    .contact-form textarea {
+        width: 100%; 
+        padding: 10px; 
+        margin-bottom: 10px; 
+        border-radius: 5px;
+        border: 1px solid #ccc; 
+    }
+
+    .contact-form textarea {
+        height: 100px; 
+    }
+
+    .contact-form .actions {
+        text-align: right; 
+    }
+
+    .contact-form .button {
+        padding: 10px 20px; 
+        background-color: #007bff; 
+        color: #fff; 
+        border: none; 
+        border-radius: 5px; 
+        cursor: pointer;
+    }
+
+    .contact-form .button:hover {
+        background-color: #0056b3; 
+    }
+
+    .contact-info li {
+        margin-bottom: 10px; 
+    }
+
+    .contact-info li i {
+        margin-right: 10px; 
+    }
+
+    .contact-info li a {
+        color: #007bff; 
+    }
+
+    .contact-info li a:hover {
+        color: #0056b3; 
+    }
+</style>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="page-header">Contactanos</h1>
+        </div>
     </div>
-  
-      <div id="captcha_fd96576d025fdd8b3153b79e177efb27" class="h-captcha" data-size="invisible"></div>
-  <script src="https://js.hcaptcha.com/1/api.js?render=explicit" async></script>
-  <script>
-    window.addEventListener("load", () => {
-      const form = document.getElementById('captcha_fd96576d025fdd8b3153b79e177efb27').closest("form");
-  
-      function challengeBeforeSubmit(submitEvent) {
-        submitEvent.preventDefault();
-  
-        return hcaptcha.execute({ async: true }).then(handleCaptchaResponse).catch(err => {
-          console.error(err);
-        });
-      }
-  
-      function handleCaptchaResponse() {
-        // Allows frontends to catch the submission and boost the request instead,
-        // dispatching the validated form with ajax and avoid reloading the page.
-        const detail = { captcha_id: 'captcha_fd96576d025fdd8b3153b79e177efb27' };
-        const uncancelled = form.dispatchEvent(new Event("jumpseller-captcha-validated", { cancelable: true, detail }));
-        if (uncancelled) form.submit();
-      }
-  
-      hcaptcha.render('captcha_fd96576d025fdd8b3153b79e177efb27', {
-        sitekey: "3bce8b88-f3b0-479b-b984-078c51d2a80f",
-      });
-  
-      form.addEventListener('submit', challengeBeforeSubmit);
-    });
-  </script>
-    <script>
-     function onSubmitContact(token) {
-       document.getElementById("contact_form").submit();
-     }
-   </script>
-  </form>
-          </section>
-              <section class="col-md-6">
-                  <h2>Contact Information</h2>
-                  <ul id="contact-list">
-                          <li>
-                              <i class="fas fa-phone"></i>
-                              <a href="tel:+1123123123">+1 123 123 123</a>
-                          </li>        
-                  </ul>  
-              </section>
-     
-      </div>
-  </div>
-<!--FIN CONTACTOS -->   
-<!-- /END THE FEATURETTES -->    
-        </div><!-- /.container --> 
+    <div class="row justify-content-center contact-section">
+        <section class="mb-3 col-md-6 contact-form">
+            <h2>CONTACTATE CON NOSOTROS</h2>
+            <p>Si tienes alguna duda puedes contactarte con nuestros distribuidores.</p>
+            <form id="contact_form" action="/contact/send" accept-charset="UTF-8" method="post">
+                <input type="hidden" name="authenticity_token" value="q_vrrlK-Aw9bW--JkCKKcji2FCgjWKD6zhd62U26cJTCL18szxZXSS_5MZIz5swNoIWNa6BG3WVGNhf-z0dUrQ" autocomplete="off">
+                <div id="contactpage">
+                    <div id="contactpage_email" class="field">
+                        <label for="email" class="required">E-mail <em>*</em></label><br>
+                        <input class="text" required="required" autocomplete="email" type="email" name="contact[email]" id="contact_email">
+                    </div>
+                    <div id="contactpage_name" class="field">
+                        <label for="contactpage_name" class="required">Nombre <em>*</em></label><br>
+                        <input class="text" required="required" autocomplete="name" type="text" name="contact[name]" id="contact_name">
+                    </div>
+                    <div id="contactpage_phone" class="field">
+                        <label for="contactpage_phone">Telefono</label><br>
+                        <input class="text" autocomplete="tel" type="tel" name="contact[phone]" id="contact_phone">
+                    </div>
+                    <div id="contactpage_message">
+                        <label for="contactpage_message" class="required">Mensaje <em>*</em></label><br>
+                        <textarea class="text" style="height:10em;" required="required" name="contact[message]" id="contact_message"></textarea>
+                    </div>
+                    <p class="required">* Required Fields</p>
+                    <div style="text-align:right;" class="actions">
+                        <input type="submit" name="commit" value="Submit" id="submit_contact" class="button" data-disable-with="Submit">
+                    </div>
+                </div>
+                <div id="captcha_fd96576d025fdd8b3153b79e177efb27" class="h-captcha" data-size="invisible"></div>
+                <script src="https://js.hcaptcha.com/1/api.js?render=explicit" async></script>
+                <script>
+                    window.addEventListener("load", () => {
+                        const form = document.getElementById('captcha_fd96576d025fdd8b3153b79e177efb27').closest("form");
+
+                        function challengeBeforeSubmit(submitEvent) {
+                            submitEvent.preventDefault();
+
+                            return hcaptcha.execute({ async: true }).then(handleCaptchaResponse).catch(err => {
+                                console.error(err);
+                            });
+                        }
+
+                        function handleCaptchaResponse() {
+                            const detail = { captcha_id: 'captcha_fd96576d025fdd8b3153b79e177efb27' };
+                            const uncancelled = form.dispatchEvent(new Event("jumpseller-captcha-validated", { cancelable: true, detail }));
+                            if (uncancelled) form.submit();
+                        }
+
+                        hcaptcha.render('captcha_fd96576d025fdd8b3153b79e177efb27', {
+                            sitekey: "3bce8b88-f3b0-479b-b984-078c51d2a80f",
+                        });
+
+                        form.addEventListener('submit', challengeBeforeSubmit);
+                    });
+                </script>
+                <script>
+                    function onSubmitContact(token) {
+                        document.getElementById("contact_form").submit();
+                    }
+                </script>
+            </form>
+        </section>
+        <section class="col-md-6">
+            <h2>Informacion de Contacto</h2>
+            <ul class="contact-info" id="contact-list">
+                <li>
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+1123123123">+1 123 123 123</a>
+                </li>
+            </ul>
+        </section>
+    </div>
+</div>
+        </div>
       
     <?php include 'footer.php'; ?>

@@ -1,7 +1,7 @@
 <?php
 include (__DIR__.'/rol.class.php');
 $app=new Rol();
-//$app-> checkRol('administrador', true);
+$app->checkRol('Administrador', true);
 include (__DIR__.'/views/header.php');
 $action=(isset($_GET['action']))?$_GET['action']:null;
 $id_rol=(isset($_GET['id_rol']))?$_GET['id_rol']:null;
